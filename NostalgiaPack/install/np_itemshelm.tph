@@ -1,0 +1,722 @@
+// ~Restore BG1 Item Icons and Appearance~
+// Helmets DESIGNATED 50 LABEL "ac-bg-icons-colors"
+
+PRINT ~Copying...~
+COPY ~NostalgiaPack/BG1_HELMETS~ ~override~
+
+  // HELMETS
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm01.itm~) THEN BEGIN
+COPY_EXISTING ~helm01.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H0~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm00~
+	WRITE_LONG  0x5C 0
+	WRITE_ASCII 0x58 ~chelm01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 42		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 42	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~ihelm01.itm~) THEN BEGIN
+COPY_EXISTING ~ihelm01.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H0~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm00~
+	WRITE_LONG  0x5C 0
+	WRITE_ASCII 0x58 ~chelm01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 42		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 42	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+   
+   ACTION_IF (FILE_EXISTS_IN_GAME ~helm02.itm~) THEN BEGIN
+COPY_EXISTING ~helm02.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H4~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm04~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm02~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 97		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+   
+   ACTION_IF (FILE_EXISTS_IN_GAME ~helm03.itm~) THEN BEGIN
+COPY_EXISTING ~helm03.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H2~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm02~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm03~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 25		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+   
+   ACTION_IF (FILE_EXISTS_IN_GAME ~palhelm.itm~) THEN BEGIN
+COPY_EXISTING ~palhelm.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H2~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm02~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm03~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 25		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+   
+   ACTION_IF (FILE_EXISTS_IN_GAME ~helm04.itm~) THEN BEGIN
+COPY_EXISTING ~helm04.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H5~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm07~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm04~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 13		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 59	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+   
+   ACTION_IF (FILE_EXISTS_IN_GAME ~helm05.itm~) THEN BEGIN
+COPY_EXISTING ~helm05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H5~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm05~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm05~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+   
+   ACTION_IF (FILE_EXISTS_IN_GAME ~helm06.itm~) THEN BEGIN
+COPY_EXISTING ~helm06.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H5~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm05~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm05~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 39		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+   
+   ACTION_IF (FILE_EXISTS_IN_GAME ~helm07.itm~) THEN BEGIN
+COPY_EXISTING ~helm07.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H1~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm01~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm07~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 42		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+   
+   ACTION_IF (FILE_EXISTS_IN_GAME ~helm08.itm~) THEN BEGIN
+COPY_EXISTING ~helm08.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H4~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm04~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm02~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 25		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+   
+   ACTION_IF (FILE_EXISTS_IN_GAME ~helm09.itm~) THEN BEGIN
+COPY_EXISTING ~helm09.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H3~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm03~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm06~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 39		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~helm10.itm~) THEN BEGIN
+COPY_EXISTING ~helm10.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H5~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm05~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm05~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+    ACTION_IF (FILE_EXISTS_IN_GAME ~ihelm10.itm~) THEN BEGIN
+COPY_EXISTING ~ihelm10.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H5~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm05~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm05~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm11.itm~) THEN BEGIN
+COPY_EXISTING ~helm11.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H5~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm05~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm05~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 104		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 104	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm12.itm~) THEN BEGIN
+COPY_EXISTING ~helm12.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H2~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm02~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm03~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 24		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 24  // colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 24	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm13.itm~) THEN BEGIN
+COPY_EXISTING ~helm13.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H5~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm05~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm05~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 94		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94		// colour index
+	SET location = hteal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm14.itm~) THEN BEGIN
+COPY_EXISTING ~helm14.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H1~
+	WRITE_LONG  0x3E 0
+	WRITE_ASCII 0x3A ~ihelm14~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm07~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 98		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 98	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 98	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm15.itm~) THEN BEGIN
+COPY_EXISTING ~helm15.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm00~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 42		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 42	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  // START BGII HELMETS
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~compon05.itm~) THEN BEGIN
+COPY_EXISTING ~compon05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~1chelmx9~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 13		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 51	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm16.itm~) THEN BEGIN
+COPY_EXISTING ~helm16.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm17.itm~) THEN BEGIN
+COPY_EXISTING ~helm17.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 100		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 106	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm18.itm~) THEN BEGIN
+COPY_EXISTING ~helm18.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 79		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 79	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm21.itm~) THEN BEGIN
+COPY_EXISTING ~helm21.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 33		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 33	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm21.itm~) THEN BEGIN
+COPY_EXISTING ~helm21.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 33		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 33	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm22.itm~) THEN BEGIN
+COPY_EXISTING ~helm22.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 13		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 48	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm23.itm~) THEN BEGIN
+COPY_EXISTING ~helm23.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 79		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 79	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm24.itm~) THEN BEGIN
+COPY_EXISTING ~helm24.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 79		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 79	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm25.itm~) THEN BEGIN
+COPY_EXISTING ~helm25.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 79		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 79	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm29.itm~) THEN BEGIN
+COPY_EXISTING ~helm29.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 79		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 79	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm30.itm~) THEN BEGIN
+COPY_EXISTING ~helm30.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 79		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 79	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm31.itm~) THEN BEGIN
+COPY_EXISTING ~helm31.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm32.itm~) THEN BEGIN
+COPY_EXISTING ~helm32.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	WRITE_ASCII 0x22 ~H2~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~helm33.itm~) THEN BEGIN
+COPY_EXISTING ~helm33.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	WRITE_ASCII 0x22 ~H3~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm06~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 42		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END	
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~wa2helm.itm~) THEN BEGIN
+COPY_EXISTING ~wa2helm.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm06~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~1chelmx9~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 42		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 67	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (MOD_IS_INSTALLED ~setup-animod.tp2~ 20) OR 
+			(MOD_IS_INSTALLED ~setup-animod.tp2~ 21) THEN BEGIN
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdhelm02.itm~) THEN BEGIN
+COPY_EXISTING ~bdhelm02.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H5~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm05~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm05a~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdhelm03.itm~) THEN BEGIN
+COPY_EXISTING ~bdhelm03.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H0~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm00~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 42		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 42	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdhelm04.itm~) THEN BEGIN
+COPY_EXISTING ~bdhelm04.itm~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~1chelm17~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdhelm07.itm~) THEN BEGIN
+COPY_EXISTING ~bdhelm07.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H5~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm05~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm05a~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdhelm08.itm~) THEN BEGIN
+COPY_EXISTING ~bdhelm08.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+    WRITE_ASCII 0x22 ~H5~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm05~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~chelm05a~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdhelm09.itm~) THEN BEGIN
+COPY_EXISTING ~bdhelm09.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~1chelm01~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdhelmj3.itm~) THEN BEGIN
+COPY_EXISTING ~bdhelmj3.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	WRITE_ASCII 0x22 ~H0~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ihelm00~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~1chelm01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 42		// colour index
+	SET location = hgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 42	// colour index
+	SET location = hred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = hblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+  END
+  
+  END

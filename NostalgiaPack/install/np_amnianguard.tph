@@ -1,0 +1,15 @@
+// ~Restore BG1 Amnian Guard appearance~
+// DESIGNATED 80 LABEL "ac-bg-amnianguard"
+
+	ACTION_FOR_EACH creature IN ~amnis~ ~amnis2~ ~amnis3~ ~amnis4~ ~amnise~ ~amnise2~ ~amsleep~ ~dead2~ ~deadfuck~ ~hick~ BEGIN
+		ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) AND ((MOD_IS_INSTALLED ~nostalgiapack.tp2~ (ID_OF_LABEL ~nostalgiapack.tp2~ "ac-bg-spritesns")) OR (MOD_IS_INSTALLED ~nostalgiapack.tp2~ (ID_OF_LABEL ~nostalgiapack.tp2~ "ac-bg-sprites"))) THEN BEGIN
+			COPY_EXISTING ~%creature%.cre~ ~override~		
+					WRITE_LONG 0x28 0x5600
+				BUT_ONLY
+			END ELSE BEGIN
+			COPY_EXISTING ~%creature%.cre~ ~override~		
+					WRITE_LONG 0x28 0x6100
+				BUT_ONLY
+			END
+		END
+		

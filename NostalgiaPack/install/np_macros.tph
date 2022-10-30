@@ -1,0 +1,110 @@
+// Erephine's macros for item coloring
+
+DEFINE_ACTION_MACRO ~Locations~ BEGIN
+// for helmets
+OUTER_SET hgrey = 48
+OUTER_SET hteal = 49
+OUTER_SET hpink = 50
+OUTER_SET hyellow = 51
+OUTER_SET hred = 52
+OUTER_SET hblue = 53
+OUTER_SET hgreen = 54
+// for shields
+OUTER_SET sgrey = 32
+OUTER_SET steal = 33
+OUTER_SET spink = 34
+OUTER_SET syellow = 35
+OUTER_SET sred = 36
+OUTER_SET sblue = 37
+OUTER_SET sgreen = 38
+// for armour
+OUTER_SET agrey = 0
+OUTER_SET ateal = 1
+OUTER_SET apink = 2
+OUTER_SET ayellow = 3
+OUTER_SET ared = 4
+OUTER_SET ablue = 5
+OUTER_SET agreen = 6
+// for weapons
+OUTER_SET wgrey = 16
+OUTER_SET wteal = 17
+OUTER_SET wpink = 18
+OUTER_SET wyellow = 19
+OUTER_SET wred = 20
+OUTER_SET wblue = 21
+OUTER_SET wgreen = 22
+END
+
+DEFINE_PATCH_MACRO ~clear~ BEGIN
+SET opcode_to_delete = 7
+LAUNCH_PATCH_MACRO DELETE_ITEM_EQEFFECT
+SET opcode_to_delete = 8
+LAUNCH_PATCH_MACRO DELETE_ITEM_EQEFFECT
+SET opcode_to_delete = 9
+LAUNCH_PATCH_MACRO DELETE_ITEM_EQEFFECT
+END
+
+DEFINE_PATCH_MACRO ~ffcolor~ BEGIN
+SET opcode_to_delete = 101
+LAUNCH_PATCH_MACRO DELETE_ITEM_EQEFFECT
+END
+
+DEFINE_PATCH_MACRO ~colour~ BEGIN
+SET opcode = 7			// Set opcode
+SET target = 1			// target type
+SET timing = 2			// timing type
+SET power = 0			// power
+SET resist_dispel = 0	// dispel/resitance
+SET duration = 0		// duration
+SET probability1 = 100	// probability 1
+SET probability2 = 0	// probability 2
+SPRINT "resource" "" 		// resource
+SET dicenumber = 0		// dice number 
+SET dicesize = 0		// dice size
+SET savingthrow = 0   // saving throw
+SET savebonus = 0		// saving throw bonus 
+SET parameter1 = gradient // set colour gradient
+SET parameter2 = location // set location
+LAUNCH_PATCH_MACRO ADD_ITEM_EQEFFECT
+END
+
+DEFINE_PATCH_MACRO ~pulse~ BEGIN
+SET opcode = 9		// Set opcode
+SET target = 1			// target type
+SET timing = 2			// timing type
+SET power = 0			// power
+SET resist_dispel = 0	// dispel/resitance
+SET duration = 0		// duration
+SET probability1 = 100	// probability 1
+SET probability2 = 0	// probability 2
+SPRINT "resource" "" 		// resource
+SET dicenumber = 0		// dice number 
+SET dicesize = 0		// dice size
+SET savingthrow = 0   // saving throw
+SET savebonus = 0		// saving throw bonus 
+SET setrgb = (setb << 24)+(setg << 16)+(setr << 8) // Set RGB
+SET parameter1 = setrgb
+SET settwo = (speed << 16)+(location) // Set location and speed
+SET parameter2 = settwo
+LAUNCH_PATCH_MACRO ADD_ITEM_EQEFFECT
+END
+
+DEFINE_PATCH_MACRO ~glow~ BEGIN
+SET opcode = 8		// Set opcode
+SET target = 1			// target type
+SET timing = 2			// timing type
+SET power = 0			// power
+SET resist_dispel = 0	// dispel/resitance
+SET duration = 0		// duration
+SET probability1 = 100	// probability 1
+SET probability2 = 0	// probability 2
+SPRINT "resource" "" 		// resource
+SET dicenumber = 0		// dice number 
+SET dicesize = 0		// dice size
+SET savingthrow = 0   // saving throw
+SET savebonus = 0		// saving throw bonus 
+SET setrgb = (setb << 24)+(setg << 16)+(setr << 8) // Set RGB
+SET parameter1 = setrgb
+SET parameter2 = location // set location
+LAUNCH_PATCH_MACRO ADD_ITEM_EQEFFECT
+END

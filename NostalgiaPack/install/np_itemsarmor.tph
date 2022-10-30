@@ -1,0 +1,1551 @@
+// ~Restore BG1 Item Icons and Appearance~
+// Armor DESIGNATED 50 LABEL "ac-bg-icons-colors"
+
+PRINT ~Copying...~
+COPY ~NostalgiaPack/BG1_ARMORS~ ~override~
+COPY ~NostalgiaPack/BG1_ITEMS~ ~override~
+
+  // LEATHER ARMOR
+  
+	ACTION_IF (GAME_IS ~bgee~) THEN BEGIN
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat02.itm~) THEN BEGIN
+COPY_EXISTING ~leat02.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 92		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 93	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 21	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat05.itm~) THEN BEGIN
+COPY_EXISTING ~leat05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 95		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 93	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat06.itm~) THEN BEGIN
+COPY_EXISTING ~leat06.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 23		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat07.itm~) THEN BEGIN
+COPY_EXISTING ~leat07.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 94		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 95	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat08.itm~) THEN BEGIN
+COPY_EXISTING ~leat08.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 21		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat09.itm~) THEN BEGIN
+COPY_EXISTING ~leat09.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 95		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 22	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat10.itm~) THEN BEGIN
+COPY_EXISTING ~leat10.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 16		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 22	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 22	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdleat05.itm~) THEN BEGIN
+COPY_EXISTING ~bdleat05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 211		// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 149		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 149	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+	END
+	
+	// START BGII LEATHER
+
+	ACTION_IF (GAME_IS ~bg2ee eet~) THEN BEGIN
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat01.itm~) THEN BEGIN
+COPY_EXISTING ~leat01.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_ASCII 0x44 ~1gleat01~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat02.itm~) THEN BEGIN
+COPY_EXISTING ~leat02.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1leat02~
+	WRITE_ASCII 0x44 ~1gleat01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 92		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 93	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 21	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat03.itm~) THEN BEGIN
+COPY_EXISTING ~leat03.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	WRITE_ASCII 0x44 ~1gleat01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 95		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat04.itm~) THEN BEGIN
+COPY_EXISTING ~leat04.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	WRITE_ASCII 0x44 ~1gleat01~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat05.itm~) THEN BEGIN
+COPY_EXISTING ~leat05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1leat05~
+    WRITE_ASCII 0x44 ~1gleat01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 95		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 93	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat06.itm~) THEN BEGIN
+COPY_EXISTING ~leat06.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1leat06~
+    WRITE_ASCII 0x44 ~1gleat01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 23		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat07.itm~) THEN BEGIN
+COPY_EXISTING ~leat07.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1leat07~
+    WRITE_ASCII 0x44 ~1gleat01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 94		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 95	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat08.itm~) THEN BEGIN
+COPY_EXISTING ~leat08.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1leat08~
+    WRITE_ASCII 0x44 ~1gleat01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 21		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat09.itm~) THEN BEGIN
+COPY_EXISTING ~leat09.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_ASCII 0x44 ~1gleat01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 95		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 22	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat10.itm~) THEN BEGIN
+COPY_EXISTING ~leat10.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1leat10~
+    WRITE_ASCII 0x44 ~1gleat01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 16		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 22	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 22	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat11.itm~) THEN BEGIN
+COPY_EXISTING ~leat11.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 95		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 95	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat12.itm~) THEN BEGIN
+COPY_EXISTING ~leat12.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 95		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 95	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat14.itm~) THEN BEGIN
+COPY_EXISTING ~leat14.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 91		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 91	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat15.itm~) THEN BEGIN
+COPY_EXISTING ~leat15.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 22		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 22	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat16.itm~) THEN BEGIN
+COPY_EXISTING ~leat16.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 94		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 28	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 22	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat17.itm~) THEN BEGIN
+COPY_EXISTING ~leat17.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 83		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 83	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat18.itm~) THEN BEGIN
+COPY_EXISTING ~leat18.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 22		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 4	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat19.itm~) THEN BEGIN
+COPY_EXISTING ~leat19.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 21		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 21	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 21	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 21	 	// colour index
+	SET location = ateal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 21	 	// colour index
+	SET location = apink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat20.itm~) THEN BEGIN
+COPY_EXISTING ~leat20.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 16		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 22	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 22	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat23.itm~) THEN BEGIN
+COPY_EXISTING ~leat23.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 103		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 103	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 53	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~leat24.itm~) THEN BEGIN
+COPY_EXISTING ~leat24.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 21		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 21	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+ 
+	END
+  
+  // CHAIN AND SPLINT ARMOR
+  
+	ACTION_IF (GAME_IS ~bgee~) THEN BEGIN
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan02.itm~) THEN BEGIN
+COPY_EXISTING ~chan02.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 97		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 100	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan03.itm~) THEN BEGIN
+COPY_EXISTING ~chan03.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 5		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan04.itm~) THEN BEGIN
+COPY_EXISTING ~chan04.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan05.itm~) THEN BEGIN
+COPY_EXISTING ~chan05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 14		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan06.itm~) THEN BEGIN
+COPY_EXISTING ~chan06.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 18		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan07.itm~) THEN BEGIN
+COPY_EXISTING ~chan07.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+	END
+	
+	// START BGII CHAIN AND SPLINT
+  
+	ACTION_IF (GAME_IS ~bg2ee eet~) THEN BEGIN
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan01.itm~) THEN BEGIN
+COPY_EXISTING ~chan01.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1chan01b~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 6		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 22	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan02.itm~) THEN BEGIN
+COPY_EXISTING ~chan02.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1chan02b~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 97		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 100	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan03.itm~) THEN BEGIN
+COPY_EXISTING ~chan03.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1chan03b~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 5		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan04.itm~) THEN BEGIN
+COPY_EXISTING ~chan04.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan05.itm~) THEN BEGIN
+COPY_EXISTING ~chan05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 14		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan06.itm~) THEN BEGIN
+COPY_EXISTING ~chan06.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 18		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan07.itm~) THEN BEGIN
+COPY_EXISTING ~chan07.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan08.itm~) THEN BEGIN
+COPY_EXISTING ~chan08.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 6		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 23	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 91	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan09.itm~) THEN BEGIN
+COPY_EXISTING ~chan09.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 24	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 100	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 29	 	// colour index
+	SET location = ateal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = apink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan10.itm~) THEN BEGIN
+COPY_EXISTING ~chan10.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 34		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 24	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 35	 	// colour index
+	SET location = ateal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 34	 	// colour index
+	SET location = apink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET setr = 195
+	SET setg = 0
+	SET setb = 255
+	SET speed = 0x48
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~pulse~
+	SET setr = 0
+	SET setg = 205
+	SET setb = 0
+	SET speed = 0x32
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~pulse~
+	SET setr = 219
+	SET setg = 225
+	SET setb = 0
+	SET speed = 0x28
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~pulse~
+   END
+   BUT_ONLY
+  END
+  
+//	  ACTION_IF (FILE_EXISTS_IN_GAME ~chan11.itm~) THEN BEGIN // Crimson Chain
+//	COPY_EXISTING ~chan11.itm~ ~override~
+//	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+//	LAUNCH_PATCH_MACRO ~clear~
+//	SET gradient = 30		// colour index
+//	SET location = ablue		// location
+//	LAUNCH_PATCH_MACRO ~colour~
+//	SET gradient = 101	 	// colour index
+//	SET location = agrey		// location
+//	LAUNCH_PATCH_MACRO ~colour~
+//	SET gradient = 27	 	// colour index
+//	SET location = ared		// location
+//	LAUNCH_PATCH_MACRO ~colour~
+//	SET gradient = 33	 	// colour index
+//	SET location = ateal		// location
+//	LAUNCH_PATCH_MACRO ~colour~
+//	SET gradient = 33	 	// colour index
+//	SET location = apink		// location
+//	LAUNCH_PATCH_MACRO ~colour~
+//  END
+//  BUT_ONLY
+//  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan12.itm~) THEN BEGIN
+COPY_EXISTING ~chan12.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 32		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 32	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 32	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 32	 	// colour index
+	SET location = ateal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 32	 	// colour index
+	SET location = apink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan13.itm~) THEN BEGIN
+COPY_EXISTING ~chan13.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 112		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 32	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 32	 	// colour index
+	SET location = ateal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 32	 	// colour index
+	SET location = apink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan14.itm~) THEN BEGIN
+COPY_EXISTING ~chan14.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 103		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 103	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 103	 	// colour index
+	SET location = ateal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 32	 	// colour index
+	SET location = apink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan15.itm~) THEN BEGIN
+COPY_EXISTING ~chan15.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 99		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 98	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 103	 	// colour index
+	SET location = ateal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 103	 	// colour index
+	SET location = apink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan16.itm~) THEN BEGIN
+COPY_EXISTING ~chan16.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 32		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 103	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 103	 	// colour index
+	SET location = ateal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 103	 	// colour index
+	SET location = apink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET setr = 0
+	SET setg = 146
+	SET setb = 79
+	SET speed = 0x50
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~pulse~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan17.itm~) THEN BEGIN
+COPY_EXISTING ~chan17.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 107		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 39	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 107	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 107	 	// colour index
+	SET location = ateal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 106	 	// colour index
+	SET location = apink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan18.itm~) THEN BEGIN
+COPY_EXISTING ~chan18.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 14   	// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan19.itm~) THEN BEGIN
+COPY_EXISTING ~chan19.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 32		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 103	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	 	// colour index
+	SET location = ateal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	 	// colour index
+	SET location = apink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET setr = 205
+	SET setg = 199
+	SET setb = 56
+	SET speed = 0x00
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~pulse~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan20.itm~) THEN BEGIN
+COPY_EXISTING ~chan20.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27   	// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 13	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan21.itm~) THEN BEGIN
+COPY_EXISTING ~chan21.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 99   	// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 92	 	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+	END
+  
+  // PLATE ARMOR
+  
+	ACTION_IF (GAME_IS ~bgee~) THEN BEGIN
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat01.itm~) THEN BEGIN
+COPY_EXISTING ~plat01.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 23	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat02.itm~) THEN BEGIN
+COPY_EXISTING ~plat02.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 97		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 98	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat04.itm~) THEN BEGIN
+COPY_EXISTING ~plat04.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 91	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat05.itm~) THEN BEGIN
+COPY_EXISTING ~plat05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 29		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 29	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 23	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat06.itm~) THEN BEGIN
+COPY_EXISTING ~plat06.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 7		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 44	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 10	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat07.itm~) THEN BEGIN
+COPY_EXISTING ~plat07.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 98		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 87	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 29	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat08.itm~) THEN BEGIN
+COPY_EXISTING ~plat08.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET setr = 27
+	SET setg = 13
+	SET setb = 30
+	SET speed = 0x90
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~pulse~
+	SET setr = 27
+	SET setg = 13
+	SET setb = 30
+	SET speed = 0x90
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~pulse~
+	SET gradient = 99		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+	END
+  
+  // START BGII PLATE
+  
+	ACTION_IF (GAME_IS ~bg2ee eet~) THEN BEGIN
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat01.itm~) THEN BEGIN
+COPY_EXISTING ~plat01.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 23	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat02.itm~) THEN BEGIN
+COPY_EXISTING ~plat02.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1plat02~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 97		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 98	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat04.itm~) THEN BEGIN
+COPY_EXISTING ~plat04.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1plat04~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 91	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat05.itm~) THEN BEGIN
+COPY_EXISTING ~plat05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1plat05~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 29		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 29	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 23	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat06.itm~) THEN BEGIN
+COPY_EXISTING ~plat06.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 7		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 44	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 10	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat07.itm~) THEN BEGIN
+COPY_EXISTING ~plat07.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 98		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 87	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 29	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat08.itm~) THEN BEGIN
+COPY_EXISTING ~plat08.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET setr = 27
+	SET setg = 13
+	SET setb = 30
+	SET speed = 0x90
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~pulse~
+	SET setr = 27
+	SET setg = 13
+	SET setb = 30
+	SET speed = 0x90
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~pulse~ 
+	SET gradient = 99		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat10.itm~) THEN BEGIN
+COPY_EXISTING ~plat10.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1plat02~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 97		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 98	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat11.itm~) THEN BEGIN
+COPY_EXISTING ~plat11.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 98	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 94	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat12.itm~) THEN BEGIN
+COPY_EXISTING ~plat12.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 33		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 98	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 19	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat13.itm~) THEN BEGIN
+COPY_EXISTING ~plat13.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1plat13~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat17.itm~) THEN BEGIN
+COPY_EXISTING ~plat17.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 105		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat18.itm~) THEN BEGIN	// red dragon plate
+COPY_EXISTING ~plat18.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 101		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat20.itm~) THEN BEGIN	// blue dragon plate
+COPY_EXISTING ~plat20.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 58		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 96	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat21.itm~) THEN BEGIN
+COPY_EXISTING ~plat21.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 23	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat22.itm~) THEN BEGIN // Shuruppak's Plate
+COPY_EXISTING ~plat22.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 97		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~wa2plat.itm~) THEN BEGIN
+COPY_EXISTING ~wa2plat.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1plat05~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 29		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 29	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 23	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bruenpla.itm~) THEN BEGIN
+COPY_EXISTING ~bruenpla.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~1plat04~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 91	 	// colour index
+	SET location = ared		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+	END

@@ -1,0 +1,66 @@
+  @1 = ~Poison Weapon
+The next hit with the coated wepaon will inject poison into the target (no save.)
+
+Poison targets suffer 3 damage per second for the first 6 seconds, and 1 damage per second for 18 seconds thereafter. A successful Saving Throw vs. Poison caps the damage to a total of 12.~
+  @2 = ~ASSASSIN: This is a killer trained in discreet and efficient murder, relying on anonymity and surprise to perform <PRO_HISHER> task.
+
+Advantages:
+- +1 bonus to hit and damage rolls.
+- Backstab ability reaches x7 multiplier instead of capping at x5.
+  Level 17-20: x6
+  Level 21-40: x7
+- May use the Poison Weapon ability. Gains one use at level 1 and an additional use every 4 levels thereafter.
+
+POISON WEAPON:
+The next hit with the coated wepaon will inject poison into the target (no save.)
+
+Poison targets suffer 3 damage per second for the first 6 seconds, and 1 damage per second for 18 seconds thereafter. A successful Saving Throw vs. Poison caps the damage to a total of 12.
+
+Disadvantages:
+- May only distribute 15 skill points per level among thieving skills.~
+  @3 = ~BLACKGUARD: The Blackguard epitomizes evil and is nothing short of a mortal fiend. The quintessential black knight, this villain carries a reputation of the foulest sort that is very well deserved. Consorting with demons and devils and serving dark deities, the Blackguard is hated and feared by all. Some people call these villains "anti-paladins" due to their completely evil nature.
+
+Advantages:
+– Immune to level drain and fear.
+– May turn undead as a Paladin of the same level.
+– May use the Absorb Health ability once per day.
+
+ABSORB HEALTH:
+Deals 2 points of damage per level to an enemy, healing the Blackguard the same number of Hit Points.
+
+– May use the Poison Weapon ability once per day. Gains one use at level 1, one use at level 5, and an additional use every 5 levels thereafter.
+
+POISON WEAPON:
+The next hit with the coated wepaon will inject poison into the target (no save.)
+
+Poison targets suffer 3 damage per second for the first 6 seconds, and 1 damage per second for 18 seconds thereafter. A successful Saving Throw vs. Poison caps the damage to a total of 12.
+
+– 3rd level: May use the Aura of Despair ability once per day.
+
+AURA OF DESPAIR:
+When this ability is activated, all enemies within 15 feet of the Blackguard suffer ill effects based on the Blackguard's level:
+  3rd - All enemies suffer a -1 penalty to hit and damage rolls and a -2 penalty to Armor Class for 1 turn.
+  6th - All enemies suffer a -2 penalty to hit and damage rolls and a -2 penalty to Armor Class for 1 turn.
+  15th - All enemies suffer a -4 penalty to hit and damage rolls and a -4 penalty to Armor Class for 1 turn; enemies with 8 or fewer Hit Dice are panicked as well.
+  20th - All enemies suffer a -4 penalty to hit and damage rolls and a -4 penalty to Armor Class for 1 turn; enemies with 18 or fewer Hit Dice are panicked as well.
+
+Disadvantages:
+– Alignment restricted to evil.
+– May not cast Detect Evil.
+– May not cast Protection From Evil as an innate ability.
+– May not use the Lay on Hands ability.~
+@4 = ~Little is known about this item, other than that the claw itself was taken from the corpse of the great beast Kazgaroth. It has multiple enchantments that all become activated when the claw is worn as a ring. The image of the wearer becomes blurred and more difficult to hit with weapons or target with spells. It has one drawback, however, as it seems to fuel its power with the blood of its wearer. Because of this, the wearer of the claw will often be more sickly and therefore more susceptible to poisons.
+
+STATISTICS:
+
+Equipped abilities:
+– Constitution: -2
+– Armor Class: +1, an extra +4 vs. missile attacks
+– Save vs. Death: -3
+– Save vs. Wand: +3
+– Save vs. Polymorph: +3
+– Save vs. Breath: +3 
+– Save vs. Spell: +3
+– May only be removed with a Remove Curse spell
+
+Weight: 1~

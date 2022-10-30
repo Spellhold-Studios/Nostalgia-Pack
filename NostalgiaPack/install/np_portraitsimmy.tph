@@ -1,0 +1,64 @@
+// ~Restore BG1 portraits and colors; SOD for Imoen~
+// DESIGNATED 41 LABEL "ac-bg-portraits-sodimoen"
+
+PRINT ~Copying...~
+COPY ~NostalgiaPack/SOD_PORTRAITS~ ~override~
+
+	COPY_EXISTING_REGEXP GLOB ~.*\.cre~ ~override~
+	READ_STRREF 0x8 name
+	 PATCH_IF (~%name%~ STR_EQ ~Imoen~) BEGIN
+	  WRITE_ASCII 0x34 ~BDIMOENM~ #8 // small portrait
+	  WRITE_ASCII 0x3c ~BDIMOENL~ #8  // large portrait
+	  WRITE_BYTE 0x2c 25	// metal color
+	  WRITE_BYTE 0x2d 143	// minor color
+	  WRITE_BYTE 0x2e 144 	// major color
+	  WRITE_BYTE 0x2f 157 	// skin color
+	  WRITE_BYTE 0x30 26 	// leather color
+	  WRITE_BYTE 0x31 92 	// armor color
+	  WRITE_BYTE 0x32 4 	// hair color
+     END
+	 PATCH_IF (~%name%~ STR_EQ ~Edwin~) BEGIN
+	  WRITE_ASCII 0x34 ~EDWINM~ #8	// small portrait
+	  WRITE_ASCII 0x3c ~EDWINL~ #8	// large portrait
+	  WRITE_BYTE 0x2c 80 	// metal color
+	  WRITE_BYTE 0x2d 80 	// minor color
+	  WRITE_BYTE 0x2e 47 	// major color
+	  WRITE_BYTE 0x2f 12 	// skin color
+	  WRITE_BYTE 0x30 127 	// leather color
+	  WRITE_BYTE 0x31 24 	// armor color
+	  WRITE_BYTE 0x32 91 	// hair color
+	 END
+	 PATCH_IF (~%name%~ STR_EQ ~Jaheira~) BEGIN
+	  WRITE_ASCII 0x34 ~JAHEIRAM~ #8	// small portrait
+	  WRITE_ASCII 0x3c ~JAHEIRAL~ #8	// large portrait
+	  WRITE_BYTE 0x2c 27 	// metal color
+	  WRITE_BYTE 0x2d 43 	// minor color
+	  WRITE_BYTE 0x2e 41 	// major color
+	  WRITE_BYTE 0x2f 12 	// skin color
+	  WRITE_BYTE 0x30 24 	// leather color
+	  WRITE_BYTE 0x31 21 	// armor color
+	  WRITE_BYTE 0x32 92 	// hair color
+	 END
+	PATCH_IF (~%name%~ STR_EQ ~Minsc~) BEGIN
+	  WRITE_ASCII 0x34 ~MINSCM~ #8 	// small portrait
+	  WRITE_ASCII 0x3c ~MINSCL~ #8 	// large portrait
+	  WRITE_BYTE 0x2c 25 	// metal color
+	  WRITE_BYTE 0x2d 58 	// minor color
+	  WRITE_BYTE 0x2e 60 	// major color
+	  WRITE_BYTE 0x2f 84 	// skin color
+	  WRITE_BYTE 0x30 22 	// leather color
+	  WRITE_BYTE 0x31 93 	// armor color
+	  WRITE_BYTE 0x32 84 	// hair color
+	 END
+	 PATCH_IF (~%name%~ STR_EQ ~%Viconia%~) BEGIN
+	  WRITE_ASCII 0x34 ~VICONIAM~ #8 // small portrait
+	  WRITE_ASCII 0x3c ~VICONIAL~ #8 // large portrait
+	  WRITE_BYTE 0x2c 27	// metal color
+	  WRITE_BYTE 0x2d 86 	// minor color
+	  WRITE_BYTE 0x2e 41 	// major color
+	  WRITE_BYTE 0x2f 182	// skin color
+	  WRITE_BYTE 0x30 21 	// leather color
+	  WRITE_BYTE 0x31 169	// armor color
+	  WRITE_BYTE 0x32 79 	// hair color
+	 END
+    BUT_ONLY

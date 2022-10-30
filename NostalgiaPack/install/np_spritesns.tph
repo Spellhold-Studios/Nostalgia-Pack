@@ -1,0 +1,237 @@
+// ~Restore BG1 Character Sprites~
+// DESIGNATED 20 LABEL "ac-bg-sprites"
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY ac_animation_map BEGIN
+
+0x6000 => 0x5622  // Cleric Human Male
+0x6001 => 0x5623  // Cleric Elf Male
+0x6002 => 0x5624  // Cleric Dwarf Male
+0x6003 => 0x5625  // Cleric Halfling Male
+0x6004 => 0x5642  // Cleric Gnome Male
+0x6005 => 0x5643  // Cleric Half-Orc Male
+0x6010 => 0x5626  // Cleric Human Female
+0x6011 => 0x5627  // Cleric Elf Female
+0x6012 => 0x5628  // Cleric Dwarf Female
+0x6013 => 0x5629  // Cleric Halfling Female
+0x6014 => 0x5644  // Cleric Gnome Female
+0x6015 => 0x5645  // Cleric Half-Orc Female
+0x6100 => 0x5600  // Fighter Human Male
+0x6101 => 0x5601  // Fighter Elf Male
+0x6102 => 0x5602  // Fighter Dwarf Male
+0x6103 => 0x5603  // Fighter Halfling Male
+0x6104 => 0x5630  // Fighter Gnome Male
+0x6105 => 0x5631  // Fighter Half-Orc Male
+0x6110 => 0x5604  // Fighter Human Female
+0x6111 => 0x5605  // Fighter Elf Female
+0x6112 => 0x5606  // Fighter Dwarf Female
+0x6113 => 0x5607  // Fighter Halfling Female
+0x6114 => 0x5632  // Fighter Gnome Female
+0x6115 => 0x5633  // Fighter Half-Orc Female
+0x6200 => 0x5608  // Mage Human Male
+0x6201 => 0x5609  // Mage Elf Male
+0x6202 => 0x5610  // Mage Dwarf Male
+0x6204 => 0x5634  // Mage Gnome Male
+0x6205 => 0x5635  // Mage Half-Orc Male
+0x6210 => 0x5611  // Mage Human Female
+0x6211 => 0x5612  // Mage Elf Female
+0x6212 => 0x5613  // Mage Dwarf Female
+0x6214 => 0x5636  // Mage Gnome Female
+0x6215 => 0x5637  // Mage Hal-Orc Female
+0x6300 => 0x5614  // Thief Human Male
+0x6301 => 0x5615  // Thief Elf Male
+0x6302 => 0x5616  // Thief Dwarf Male
+0x6303 => 0x5617  // Thief Halfling Male
+0x6304 => 0x5638  // Thief Gnome Male
+0x6305 => 0x5639  // Thief Half-Orc Male
+0x6310 => 0x5618  // Thief Human Female
+0x6311 => 0x5619  // Thief Elf Female
+0x6312 => 0x5620  // Thief Dwarf Female
+0x6313 => 0x5621  // Thief Halfling Female
+0x6314 => 0x5640  // Thief Gnome Female
+0x6315 => 0x5641  // Thief Half-Orc Female
+
+END
+
+
+  // PATCH CRE AND CHR FILES
+
+  
+ COPY_EXISTING_REGEXP GLOB ~.*\.chr~ ~override~
+  READ_LONG 0x8c current
+  PATCH_PHP_EACH ac_animation_map AS old => new BEGIN
+    PATCH_IF (current = old) BEGIN
+      WRITE_LONG 0x8c new
+    END
+  END
+  BUT_ONLY
+
+
+ ACTION_CLEAR_ARRAY WingItems
+  OUTER_SET wingnum = 0
+  COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~
+    READ_ASCII 0x28 appearance (2)
+    PATCH_IF (~%appearance%~ STR_EQ ~ZW~) BEGIN
+      SPRINT $WingItems(~%wingnum%~) ~%SOURCE_RES%~
+      SET wingnum = wingnum + 1
+    END
+  BUT_ONLY
+ COPY_EXISTING_REGEXP GLOB ~.*\.cre~ ~override~
+  SET validslot = 0
+  READ_LONG 0x2bc itemsoffset
+  READ_LONG 0x2b8 itemslot
+  READ_LONG 0x2c0 itemnumber
+  READ_SSHORT (itemslot + 0x04) shieldslot
+  PATCH_IF (shieldslot >= "0") BEGIN
+    READ_ASCII ((LONG_AT 0x2bc) + %shieldslot% * 0x14) itemname
+    INNER_ACTION BEGIN
+      COPY_EXISTING ~%itemname%.itm~ ~override~
+        READ_SHORT 0x1c itemtype
+        PATCH_IF (itemtype = "12") BEGIN
+          SET validslot = 1
+        END
+      BUT_ONLY IF_EXISTS
+    END
+  END
+  ELSE BEGIN
+    SET validslot = 1
+  END
+    SET haswings = 0
+  FOR (n = 0; n < itemnumber; ++n) BEGIN
+    READ_ASCII (%itemsoffset% + %n% * 0x14) itemname
+    PATCH_PHP_EACH WingItems AS index => wingsid BEGIN
+      PATCH_IF (~%itemname%~ STR_EQ ~%wingsid%~) BEGIN
+        SET haswings = 1
+      END
+    END
+  END
+  PATCH_IF (validslot = 1 AND haswings = 0) BEGIN
+    READ_LONG 0x28 current
+    PATCH_PHP_EACH ac_animation_map AS old => new BEGIN
+      PATCH_IF (old = current) BEGIN
+        WRITE_LONG 0x28 new
+       END
+    END
+  END
+ BUT_ONLY
+
+
+  // PATCH ROBES
+  
+ACTION_DEFINE_ASSOCIATIVE_ARRAY ac_robes_map BEGIN
+  
+2W => 5A
+3W => 6A
+4W => 7A
+
+END
+  
+ COPY_EXISTING_REGEXP GLOB ~.*\.itm~ ~override~
+  READ_ASCII 0x22 current (2)
+  PATCH_PHP_EACH ac_robes_map AS no => yes BEGIN
+   PATCH_IF (~%current%~ STR_EQ ~%no%~) BEGIN
+	WRITE_ASCIIE 0x22 ~%yes%~ #2
+    END
+   END
+   BUT_ONLY
+
+
+MAKE_BIFF BG1ANIM BEGIN ~NostalgiaPack/BG1_BAM~ ~.*\.bam~ END
+MAKE_BIFF BG1SHLD BEGIN ~NostalgiaPack/BG1_SHIELDS~ ~.*\.bam~ END
+
+
+PRINT ~Copying...~
+COPY ~NostalgiaPack/BG1_INI~ ~override~
+
+
+APPEND ~ANIMATE.IDS~
+  ~0x5600 BG1_FIGHTER_HUMAN_MALE
+    0x5601 BG1_FIGHTER_ELF_MALE
+    0x5602 BG1_FIGHTER_DWARF_MALE
+    0x5603 BG1_FIGHTER_HALFLING_MALE
+    0x5604 BG1_FIGHTER_HUMAN_FEMALE
+    0x5605 BG1_FIGHTER_ELF_FEMALE
+    0x5606 BG1_FIGHTER_DWARF_FEMALE
+    0x5607 BG1_FIGHTER_HALFLING_FEMALE
+    0x5608 BG1_MAGE_HUMAN_MALE
+    0x5609 BG1_MAGE_ELF_MALE
+    0x5610 BG1_MAGE_DWARF_MALE
+    0x5611 BG1_MAGE_HUMAN_FEMALE
+    0x5612 BG1_MAGE_ELF_FEMALE
+    0x5613 BG1_MAGE_DWARF_FEMALE
+    0x5614 BG1_THIEF_HUMAN_MALE
+    0x5615 BG1_THIEF_ELF_MALE
+    0x5616 BG1_THIEF_DWARF_MALE
+    0x5617 BG1_THIEF_HALFLING_MALE
+    0x5618 BG1_THIEF_HUMAN_FEMALE
+    0x5619 BG1_THIEF_ELF_FEMALE
+    0x5620 BG1_THIEF_DWARF_FEMALE
+    0x5621 BG1_THIEF_HALFLING_FEMALE
+    0x5622 BG1_CLERIC_HUMAN_MALE
+    0x5623 BG1_CLERIC_ELF_MALE
+    0x5624 BG1_CLERIC_DWARF_MALE
+    0x5625 BG1_CLERIC_HALFLING_MALE
+    0x5626 BG1_CLERIC_HUMAN_FEMALE
+    0x5627 BG1_CLERIC_ELF_FEMALE
+    0x5628 BG1_CLERIC_DWARF_FEMALE
+    0x5629 BG1_CLERIC_HALFLING_FEMALE
+    0x5630 BG1_FIGHTER_GNOME_MALE
+    0x5631 BG1_FIGHTER_HALFORC_MALE
+    0x5632 BG1_FIGHTER_GNOME_FEMALE
+    0x5633 BG1_FIGHTER_HALFORC_FEMALE
+    0x5634 BG1_MAGE_GNOME_MALE
+    0x5635 BG1_MAGE_HALFORC_MALE
+    0x5636 BG1_MAGE_GNOME_FEMALE
+    0x5637 BG1_MAGE_HALFORC_FEMALE
+    0x5638 BG1_THIEF_GNOME_MALE
+    0x5639 BG1_THIEF_HALFORC_MALE
+    0x5640 BG1_THIEF_GNOME_FEMALE
+    0x5641 BG1_THIEF_HALFORC_FEMALE
+    0x5642 BG1_CLERIC_GNOME_MALE
+    0x5643 BG1_CLERIC_HALFORC_MALE
+    0x5644 BG1_CLERIC_GNOME_FEMALE
+    0x5645 BG1_CLERIC_HALFORC_FEMALE~
+
+
+  // FIX SOD INITIAL CUTSCENE
+   
+ ACTION_IF (FILE_EXISTS_IN_GAME ~bdintro.bcs~) THEN BEGIN  
+ COPY_EXISTING ~bdintro.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+        REPLACE_TEXTUALLY ~FIGHTER_FEMALE_HUMAN~ ~BG1_FIGHTER_HUMAN_FEMALE~
+    END
+    BUT_ONLY
+ END
+	
+ ACTION_IF (FILE_EXISTS_IN_GAME ~6621.INI~) THEN BEGIN	
+ COPY_EXISTING ~6621.INI~ ~override~
+	REPLACE_TEXTUALLY ~WPM~ ~WPL~
+	REPLACE_TEXTUALLY ~XHFF~ ~CHFF~
+ BUT_ONLY
+ END
+
+  // FIX SOD KHALID AND JAHEIRA
+   
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bd7100.bcs~) THEN BEGIN  
+    COPY_EXISTING ~bd7100.bcs~ ~override~
+       DECOMPILE_AND_PATCH BEGIN
+           REPLACE_TEXTUALLY ~\(ApplySpellRES("bdrejuve","jaheira")\)~
+             ~ActionOverride("jaheira",Polymorph(BG1_FIGHTER_ELF_FEMALE)) \1~
+       END
+       BUT_ONLY
+    END
+   
+    ACTION_IF (FILE_EXISTS_IN_GAME ~bd2000.bcs~) THEN BEGIN  
+    COPY_EXISTING ~bd2000.bcs~ ~override~
+       DECOMPILE_AND_PATCH BEGIN
+           REPLACE_TEXTUALLY ~\(ApplySpellRES("bdrejuve","khalid")\)~
+             ~ActionOverride("khalid",Polymorph(BG1_FIGHTER_ELF_MALE)) \1~
+       END
+       BUT_ONLY
+    END
+
+
+    // FIX SOD INITIAL DUNGEON
+
+COPY_EXISTING ~BDRESURR.SPL~ override
+  LPF ALTER_EFFECT INT_VAR match_opcode = 32 parameter2 = 0 END
+  BUT_ONLY IF_EXISTS

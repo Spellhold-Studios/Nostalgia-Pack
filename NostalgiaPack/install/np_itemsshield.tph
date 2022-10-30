@@ -1,0 +1,1275 @@
+// ~Restore BG1 Item Icons and Appearance~
+// Shields DESIGNATED 50 LABEL "ac-bg-icons-colors"
+
+  // SHIELDS
+  
+	ACTION_IF (GAME_IS ~bgee~) THEN BEGIN
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld01.itm~) THEN BEGIN
+COPY_EXISTING ~shld01.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY
+ END
+ 
+ ACTION_IF (FILE_EXISTS_IN_GAME ~shld01a.itm~) THEN BEGIN
+COPY_EXISTING ~shld01a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld01~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld01~
+	WRITE_ASCII 0x44 ~gshld01~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY
+ END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld02.itm~) THEN BEGIN
+COPY_EXISTING ~shld02.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 24		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 29		// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld02a.itm~) THEN BEGIN
+COPY_EXISTING ~shld02a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld02~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld02~
+	WRITE_ASCII 0x44 ~gshld01~
+	WRITE_ASCII 0x22 ~D2~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 24		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 29		// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld02p.itm~) THEN BEGIN
+COPY_EXISTING ~shld02p.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishldzs~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld07~
+	WRITE_ASCII 0x44 ~gshld05~
+	WRITE_ASCII 0x22 ~D4~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 200		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 213	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 199		// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 219		// colour index
+	SET location = sred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld03.itm~) THEN BEGIN
+COPY_EXISTING ~shld03.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 70		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 100		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld03a.itm~) THEN BEGIN
+COPY_EXISTING ~shld03a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld03~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld03~
+	WRITE_ASCII 0x44 ~gshld03~
+	WRITE_ASCII 0x22 ~D2~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 70		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 100		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld03p.itm~) THEN BEGIN
+COPY_EXISTING ~shld03p.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D2~
+   END
+   BUT_ONLY
+  END
+   
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld04.itm~) THEN BEGIN
+COPY_EXISTING ~shld04.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld04a.itm~) THEN BEGIN
+COPY_EXISTING ~shld04a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld04~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld04~
+	WRITE_ASCII 0x44 ~gshld03~
+	WRITE_ASCII 0x22 ~D3~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld04p.itm~) THEN BEGIN
+COPY_EXISTING ~shld04p.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld04~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld04~
+	WRITE_ASCII 0x44 ~gshld03~
+	WRITE_ASCII 0x22 ~D3~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld05.itm~) THEN BEGIN
+COPY_EXISTING ~shld05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 111		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld05a.itm~) THEN BEGIN
+COPY_EXISTING ~shld05a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld05~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld05~
+	WRITE_ASCII 0x44 ~gshld05~
+	WRITE_ASCII 0x22 ~D4~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 111		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld05p.itm~) THEN BEGIN
+COPY_EXISTING ~shld05p.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D3~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld06.itm~) THEN BEGIN
+COPY_EXISTING ~shld06.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 7		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27		// colour index
+	SET location = steal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 8		// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld06a.itm~) THEN BEGIN
+COPY_EXISTING ~shld06a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld06~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld06~
+	WRITE_ASCII 0x44 ~gshld05~
+	WRITE_ASCII 0x22 ~D4~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 7		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27		// colour index
+	SET location = steal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 8		// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld06p.itm~) THEN BEGIN
+COPY_EXISTING ~shld06p.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D3~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld07.itm~) THEN BEGIN
+COPY_EXISTING ~shld07.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 25		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 58		// colour index
+	SET location = steal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 66		// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld07a.itm~) THEN BEGIN
+COPY_EXISTING ~shld07a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld07~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld07~
+	WRITE_ASCII 0x44 ~gshld05~
+	WRITE_ASCII 0x22 ~D4~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 25		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 58		// colour index
+	SET location = steal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 66		// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld07p.itm~) THEN BEGIN
+COPY_EXISTING ~shld07p.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D4~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld08.itm~) THEN BEGIN
+COPY_EXISTING ~shld08.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld08a.itm~) THEN BEGIN
+COPY_EXISTING ~shld08a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld08~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld08~
+	WRITE_ASCII 0x44 ~gshld08~
+	WRITE_ASCII 0x22 ~D1~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld08p.itm~) THEN BEGIN
+COPY_EXISTING ~shld08p.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D3~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld09.itm~) THEN BEGIN
+COPY_EXISTING ~shld09.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 22		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 23		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld09a.itm~) THEN BEGIN
+COPY_EXISTING ~shld09a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld09~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld09~
+	WRITE_ASCII 0x44 ~gshld08~
+	WRITE_ASCII 0x22 ~D1~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 22		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 23		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld09p.itm~) THEN BEGIN
+COPY_EXISTING ~shld09p.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D4~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld10.itm~) THEN BEGIN
+COPY_EXISTING ~shld10.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 26		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 26		// colour index
+	SET location = sred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld10a.itm~) THEN BEGIN
+COPY_EXISTING ~shld10a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld10~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld10~
+	WRITE_ASCII 0x44 ~gshld08~
+	WRITE_ASCII 0x22 ~D1~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 26		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 26		// colour index
+	SET location = sred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld11.itm~) THEN BEGIN
+COPY_EXISTING ~shld11.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld11a.itm~) THEN BEGIN
+COPY_EXISTING ~shld11a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld11~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld01~
+	WRITE_ASCII 0x44 ~gshld01~
+	WRITE_ASCII 0x22 ~D2~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld12.itm~) THEN BEGIN
+COPY_EXISTING ~shld12.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld12a.itm~) THEN BEGIN
+COPY_EXISTING ~shld12a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld12~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld01~
+	WRITE_ASCII 0x44 ~gshld01~
+	WRITE_ASCII 0x22 ~D2~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+ ACTION_IF (FILE_EXISTS_IN_GAME ~shld13.itm~) THEN BEGIN
+COPY_EXISTING ~shld13.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 100		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 59		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld13a.itm~) THEN BEGIN
+COPY_EXISTING ~shld13a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld13~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld03~
+	WRITE_ASCII 0x44 ~gshld03~
+	WRITE_ASCII 0x22 ~D3~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 100		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 59		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld14.itm~) THEN BEGIN
+COPY_EXISTING ~shld14.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 10		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld14a.itm~) THEN BEGIN
+COPY_EXISTING ~shld14a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld14~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld03~
+	WRITE_ASCII 0x44 ~gshld03~
+	WRITE_ASCII 0x22 ~D3~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 10		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+   ACTION_IF (FILE_EXISTS_IN_GAME ~shld15.itm~) THEN BEGIN
+COPY_EXISTING ~shld15.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 19		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld15a.itm~) THEN BEGIN
+COPY_EXISTING ~shld15a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld15~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld05~
+	WRITE_ASCII 0x44 ~gshld05~
+	WRITE_ASCII 0x22 ~D4~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 19		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+   ACTION_IF (FILE_EXISTS_IN_GAME ~shld16.itm~) THEN BEGIN
+COPY_EXISTING ~shld16.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 19		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld16a.itm~) THEN BEGIN
+COPY_EXISTING ~shld16a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld16~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld05~
+	WRITE_ASCII 0x44 ~gshld05~
+	WRITE_ASCII 0x22 ~D4~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 19		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld18.itm~) THEN BEGIN
+COPY_EXISTING ~shld18.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 98		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 100		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld19.itm~) THEN BEGIN
+COPY_EXISTING ~shld19.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 25		// colour index
+	SET location = sred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld19a.itm~) THEN BEGIN
+COPY_EXISTING ~shld19a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld19~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld19~
+	WRITE_ASCII 0x44 ~gshld05~
+	WRITE_ASCII 0x22 ~D4~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 25		// colour index
+	SET location = sred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25		// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld20.itm~) THEN BEGIN
+COPY_EXISTING ~shld20.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 24		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 24 	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld30a.itm~) THEN BEGIN
+COPY_EXISTING ~shld30a.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld07~
+	WRITE_LONG  0x5C 0
+    WRITE_ASCII 0x58 ~cshld06~
+	WRITE_ASCII 0x44 ~gshld05~
+	WRITE_ASCII 0x22 ~D4~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 0		// colour index
+	SET location = sred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 208		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 208 	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 66 	 	// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  // START SOD SHIELDS
+  
+  ACTION_IF (MOD_IS_INSTALLED ~setup-animod.tp2~ 20) OR
+			(MOD_IS_INSTALLED ~setup-animod.tp2~ 21) THEN BEGIN
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdshld03.itm~) THEN BEGIN
+COPY_EXISTING ~bdshld03.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D3~
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld05~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdshld04.itm~) THEN BEGIN
+COPY_EXISTING ~bdshld04.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D3~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdshld05.itm~) THEN BEGIN
+COPY_EXISTING ~bdshld05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D3~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdshld08.itm~) THEN BEGIN
+COPY_EXISTING ~bdshld08.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D4~
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld16~
+   END
+   BUT_ONLY
+  END
+  
+  END
+  END
+  
+  // START BGII SHIELDS
+
+	ACTION_IF (GAME_IS ~bg2ee eet~) THEN BEGIN
+	
+	ACTION_IF (MOD_IS_INSTALLED ~setup-animod.tp2~ 20) OR
+			  (MOD_IS_INSTALLED ~setup-animod.tp2~ 21) THEN BEGIN
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld01A.itm~) THEN BEGIN
+COPY_EXISTING ~shld01A.itm~ ~override/shld01.itm~
+END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld02A.itm~) THEN BEGIN
+COPY_EXISTING ~shld02A.itm~ ~override/shld02.itm~
+END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld03A.itm~) THEN BEGIN
+COPY_EXISTING ~shld03A.itm~ ~override/shld03.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 100		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 70 	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld04A.itm~) THEN BEGIN
+COPY_EXISTING ~shld04A.itm~ ~override/shld04.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 99 	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld05A.itm~) THEN BEGIN
+COPY_EXISTING ~shld05A.itm~ ~override/shld05.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 111 	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld06A.itm~) THEN BEGIN
+COPY_EXISTING ~shld06A.itm~ ~override/shld06.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 7 	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 27 	 	// colour index
+	SET location = steal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+    SET gradient = 8 	 	// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld07A.itm~) THEN BEGIN
+COPY_EXISTING ~shld07A.itm~ ~override/shld07.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 25		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 58	 	// colour index
+	SET location = steal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+    SET gradient = 66 	 	// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld08A.itm~) THEN BEGIN
+COPY_EXISTING ~shld08A.itm~ ~override/shld08.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld09A.itm~) THEN BEGIN
+COPY_EXISTING ~shld09A.itm~ ~override/shld09.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 22		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 23	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld10A.itm~) THEN BEGIN
+COPY_EXISTING ~shld10A.itm~ ~override/shld10.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 26	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 26	 	// colour index
+	SET location = sred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld11A.itm~) THEN BEGIN
+COPY_EXISTING ~shld11A.itm~ ~override/shld11.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld12A.itm~) THEN BEGIN
+COPY_EXISTING ~shld12A.itm~ ~override/shld12.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 30	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld13A.itm~) THEN BEGIN
+COPY_EXISTING ~shld13A.itm~ ~override/shld13.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 100		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 59	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld14A.itm~) THEN BEGIN
+COPY_EXISTING ~shld14A.itm~ ~override/shld14.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 10	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld15A.itm~) THEN BEGIN
+COPY_EXISTING ~shld15A.itm~ ~override/shld15.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 27		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 19	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld16A.itm~) THEN BEGIN
+COPY_EXISTING ~shld16A.itm~ ~override/shld16.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 28		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 19	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld17A.itm~) THEN BEGIN
+COPY_EXISTING ~shld17A.itm~ ~override/shld17.itm~
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld18A.itm~) THEN BEGIN
+COPY_EXISTING ~shld18A.itm~ ~override/shld18.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld05~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 98		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 100	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld19A.itm~) THEN BEGIN
+COPY_EXISTING ~shld19A.itm~ ~override/shld19.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 25		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = sred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld19A.itm~) THEN BEGIN
+COPY_EXISTING ~shld19A.itm~ ~override/shld19.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 25		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = sred		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld20.itm~) THEN BEGIN
+COPY_EXISTING ~shld20.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 24		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 24	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld21.itm~) THEN BEGIN
+COPY_EXISTING ~shld21.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_ASCII 0x22 ~D3~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishldds~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 101		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 101	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld22.itm~) THEN BEGIN
+COPY_EXISTING ~shld22.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 30		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 52	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld23A.itm~) THEN BEGIN
+COPY_EXISTING ~shld23A.itm~ ~override/shld23.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 60		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 59	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld24A.itm~) THEN BEGIN
+COPY_EXISTING ~shld24A.itm~ ~override/shld24.itm~
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld25.itm~) THEN BEGIN
+COPY_EXISTING ~shld25.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 24		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 29	 	// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld26A.itm~) THEN BEGIN
+COPY_EXISTING ~shld26A.itm~ ~override/shld26.itm~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 31		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 57	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+  END
+  BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld27.itm~) THEN BEGIN
+COPY_EXISTING ~shld27.itm~ ~override/shld27A.itm~
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld28A.itm~) THEN BEGIN
+COPY_EXISTING ~shld28A.itm~ ~override/shld28.itm~
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld29A.itm~) THEN BEGIN
+COPY_EXISTING ~shld29A.itm~ ~override/shld29.itm~
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld30A.itm~) THEN BEGIN
+COPY_EXISTING ~shld30A.itm~ ~override/shld30.itm~
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~shld31A.itm~) THEN BEGIN
+COPY_EXISTING ~shld31A.itm~ ~override/shld31.itm~
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~wa2shiel.itm~) THEN BEGIN
+COPY_EXISTING ~wa2shiel.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+    WRITE_ASCII 0x22 ~D3~
+	WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld03~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 232		// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 66		// colour index
+	SET location = steal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 254		// colour index
+	SET location = spink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 70 	 	// colour index
+	SET location = sgrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+   END
+   BUT_ONLY
+  END
+  
+  // START SOD SHIELDS
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdshld03.itm~) THEN BEGIN
+COPY_EXISTING ~bdshld03.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D3~
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld05~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdshld04.itm~) THEN BEGIN
+COPY_EXISTING ~bdshld04.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D3~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdshld05.itm~) THEN BEGIN
+COPY_EXISTING ~bdshld05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D3~
+   END
+   BUT_ONLY
+  END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdshld08.itm~) THEN BEGIN
+COPY_EXISTING ~bdshld08.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	WRITE_ASCII 0x22 ~D4~
+    WRITE_LONG  0x3E 0
+    WRITE_ASCII 0x3A ~ishld16~
+   END
+   BUT_ONLY
+  END
+  
+	END
+	END

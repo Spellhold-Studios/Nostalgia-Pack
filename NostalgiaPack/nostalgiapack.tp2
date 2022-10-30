@@ -1,0 +1,230 @@
+//__________________________________________________________________________________________________________
+//
+//	Initial setup
+//__________________________________________________________________________________________________________
+
+
+BACKUP ~weidu_external/backup/nostalgiapack~
+AUTHOR ~ac86public@gmail.com~
+VERSION ~RC4~
+
+MODDER setup_tra        ~FAIL~
+       area_variables   ~FAIL~
+       missing_extern   ~FAIL~
+       missing_resref   ~FAIL~
+       ict2_actions     ~FAIL~
+       missing_eval     ~FAIL~
+       overwriting_file ~NONE~
+
+LANGUAGE ~English~ ~en_US~ ~NostalgiaPack/tra/en_US/setup.tra~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Restore BG1 Character Sprites                    \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @21   // ~Everything but saved games~
+DESIGNATED 20 LABEL "ac-bg-spritesns"
+GROUP @2    // ~Visual Nostalgia~
+SUBCOMPONENT @20   // ~Restore BG1 Character Sprites~
+REQUIRE_PREDICATE GAME_IS ~iwdee bgee bg2ee eet~ @4   // ~This component is not compatible with PST:EE~
+
+INCLUDE ~NostalgiaPack/install/np_spritesns.tph~
+  
+
+BEGIN @22   // ~Everything including saved games~
+DESIGNATED 21 LABEL "ac-bg-sprites"
+GROUP @2  // ~Visual Nostalgia~
+SUBCOMPONENT @20  // ~Restore BG1 Character Sprites~
+REQUIRE_PREDICATE GAME_IS ~iwdee bgee bg2ee eet~ @4   // ~This component is not compatible with PST:EE~
+
+INCLUDE ~NostalgiaPack/install/np_spritess.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Restore BG1 Paperdolls                           \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @30   // ~Restore BG1 Inventory Paperdolls (by Erephine)~
+DESIGNATED 30 LABEL "ac-bg-paperdolls"
+GROUP @2    // ~Visual Nostalgia~
+REQUIRE_PREDICATE GAME_IS ~iwdee bgee bg2ee eet~ @4   // ~This component is not compatible with PST:EE~
+
+COPY ~NostalgiaPack/bg1_paperdolls~ ~override~
+COPY ~NostalgiaPack/bg1_inventory_p~ ~override~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Restore BG1 Portraits and Colors	               \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @41 // ~Restore BG1 portraits and colors for all~
+DESIGNATED 40 LABEL "ac-bg-portraits"
+GROUP @2  // ~Visual Nostalgia~
+SUBCOMPONENT @40  // ~Restore BG1 Portraits & Colors~
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @5  // ~This component is only intended for BGII:EE and EET~
+
+INCLUDE ~NostalgiaPack/install/np_portraitsall.tph~
+
+
+BEGIN @42 // ~Restore BG1 portraits and colors; SOD for Imoen~
+DESIGNATED 41 LABEL "ac-bg-portraits-sodimoen"
+GROUP @2  // ~Visual Nostalgia~
+SUBCOMPONENT @40  // ~Restore BG1 Portraits & Colors~
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @5  // ~This component is only intended for BGII:EE and EET~
+
+INCLUDE ~NostalgiaPack/install/np_portraitsimmy.tph~
+
+
+BEGIN @43 // ~Restore BG1 portraits and colors; SOD for Viconia~
+DESIGNATED 42 LABEL "ac-bg-portraits-sodviccy"
+GROUP @2  // ~Visual Nostalgia~
+SUBCOMPONENT @40  // ~Restore BG1 Portraits & Colors~
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @5  // ~This component is only intended for BGII:EE and EET~
+
+INCLUDE ~NostalgiaPack/install/np_portraitsviccy.tph~
+
+
+BEGIN @44 // ~Restore BG1 portraits and colors; SOD for Imoen and Viconia~
+DESIGNATED 43 LABEL "ac-bg-portraits-sodboth"
+GROUP @2  // ~Visual Nostalgia~
+SUBCOMPONENT @40  // ~Restore BG1 Portraits & Colors~
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @5  // ~This component is only intended for BGII:EE and EET~
+
+INCLUDE ~NostalgiaPack/install/np_portraitssod.tph~
+	
+	
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Restore BG Item Icons & Appearance               \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @50 // ~Restore BG1 Item Icons and Appearance~
+DESIGNATED 50 LABEL "ac-bg-icons-colors"
+GROUP @2  // ~Visual Nostalgia~
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @6 // ~This component is not compatible with IWD:EE or PST:EE~
+
+INCLUDE ~NostalgiaPack/install/np_macros.tph~
+
+LAUNCH_ACTION_MACRO ~Locations~
+
+INCLUDE ~NostalgiaPack/install/np_itemsarmor.tph~
+INCLUDE ~NostalgiaPack/install/np_itemshelm.tph~
+INCLUDE ~NostalgiaPack/install/np_itemsshield.tph~
+INCLUDE ~NostalgiaPack/install/np_itemswpn.tph~
+
+
+ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+  COPY ~NostalgiaPack/bg2_icons~ ~override~
+END
+
+ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
+  COPY ~NostalgiaPack/bg1_icons~ ~override~
+END
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Restore BG Flaming Fist Appearance               \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @60 // ~Restore BG1 Flaming Fist appearance~
+DESIGNATED 60 LABEL "ac-bg-flamingfist"
+GROUP @2  // ~Visual Nostalgia~
+REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~bdbalquo.cre~ @7 // ~This component requires Siege of Dragonspear~
+
+
+INCLUDE ~NostalgiaPack/install/np_macros.tph~
+
+LAUNCH_ACTION_MACRO ~Locations~
+
+INCLUDE ~NostalgiaPack/install/np_flamingfist.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Restore BG Amnian Guard Appearance               \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @80 // ~Restore BG1 Amnian Guard appearance~
+DESIGNATED 80 LABEL "ac-bg-amnianguard"
+GROUP @2  // ~Visual Nostalgia~
+REQUIRE_PREDICATE GAME_IS ~bgee eet~ @101 // ~This component requires BG:EE or EET~
+
+INCLUDE ~NostalgiaPack/install/np_amnianguard.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Restore BG1 Dimension Door Effect                \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @70  // ~Restore BG1 Dimension Door Effect~
+DESIGNATED 70 LABEL "ac-bg-dimensiondoor"
+GROUP @2  // ~Visual Nostalgia~
+REQUIRE_PREDICATE (GAME_IS ~bgee bg2ee eet~) @6 // ~This component is not compatible with IWD:EE or PST:EE~
+
+COPY ~%MOD_FOLDER%/bg1_ddoor/s@dimdr.bam~ ~override~ // spliced BG1 animation frames
+     ~%MOD_FOLDER%/bg1_ddoor/eff_m09.wav~ ~override~ // BG1 sound (reserved for Dimension Door)
+
+// restore BG1 visual effect
+COPY_EXISTING ~spdimndr.vvc~ ~override~ // vvc hardcoded to teleport (opcode #124)
+  WRITE_ASCII 0x8  ~s@dimdr~ #8 // restore BG1 BAM
+  WRITE_SHORT 0x18 0 // disable HW translucency
+  WRITE_LONG  0x68 1 // starting cycle
+  WRITE_LONG  0x6c 2 // duration cycle
+  WRITE_LONG  0x90 3 // ending cycle
+BUT_ONLY IF_EXISTS
+
+// restore BG1 delay before teleport
+COPY_EXISTING_REGEXP GLOB ~^.+\.spl$~ ~override~
+  LPF ALTER_EFFECT
+    INT_VAR
+	  silent		 =   1 // silence WeiDU warnings
+      match_opcode   = 124 // filter Dimension Door
+      match_duration =   2 // filter BG2 delay
+      duration       =   1 // set BG1 delay
+  END
+BUT_ONLY IF_EXISTS
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Undo EE chnages                                  \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @90  // ~Undo EE changes~
+DESIGNATED 90 LABEL "ac-bg-undoeechanges"
+GROUP @91  // ~Miscellaneous Nostalgia~
+REQUIRE_PREDICATE (GAME_IS ~bgee bg2ee eet~) @6 // ~This component is not compatible with IWD:EE or PST:EE~
+
+INCLUDE ~NostalgiaPack/install/np_undo_eechanges.tph~
+
+

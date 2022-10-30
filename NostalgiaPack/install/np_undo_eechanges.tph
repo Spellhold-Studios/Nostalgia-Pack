@@ -1,0 +1,420 @@
+// ~Remove EE items~
+// DESIGNATED 90 LABEL "ac-bg-removeeeitems"
+
+LOAD_TRA ~NostalgiaPack/tra/en_US/descriptions.tra~
+
+	// katana
+
+COPY_EXISTING ~INN2616.STO~ ~override~	// Candlekeep Inn
+	REMOVE_STORE_ITEM ~SW1H43~	// SW1H43 = katana
+BUT_ONLY
+
+COPY_EXISTING ~STO1112.STO~ ~override~	// General Store
+	REMOVE_STORE_ITEM ~SW1H43~	// SW1H43 = katana
+BUT_ONLY
+
+COPY_EXISTING ~DROTH.CRE~ ~override~
+	REMOVE_CRE_ITEM ~SW1H43~
+	ADD_CRE_ITEM ~SW1H01~ #0 #0 #0 ~none~ ~weapon1~
+BUT_ONLY
+
+	// wakizashi
+
+COPY_EXISTING ~INN2616.STO~ ~override~	// Candlekeep Inn
+	REMOVE_STORE_ITEM ~SW1H46~	// SW1H46 = wakizashi
+BUT_ONLY
+
+COPY_EXISTING ~STO1112.STO~ ~override~	// General Store
+	REMOVE_STORE_ITEM ~SW1H46~	// SW1H46 = wakizashi
+BUT_ONLY
+
+
+	// ninja-to
+
+COPY_EXISTING ~INN2616.STO~ ~override~	// Candlekeep Inn
+	REMOVE_STORE_ITEM ~SW1H48~	// SW1H48 = ninja-to
+BUT_ONLY
+
+COPY_EXISTING ~STO4803.STO~ ~override~	// Nashkel Store
+	REMOVE_STORE_ITEM ~SW1H48~	// SW1H48 = ninja-to
+BUT_ONLY
+
+
+	// ninja-to +1
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR0226.ARE~ ~override~	// BG Sewers
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~SW1H49~ END	// SW1H49 = ninja-to +1
+BUT_ONLY END ELSE BEGIN
+COPY_EXISTING ~BG0226.ARE~ ~override~	// BG Sewers
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~SW1H49~ END	// SW1H49 = ninja-to +1
+BUT_ONLY END
+
+
+	// scimitar +1
+
+COPY_EXISTING ~OGREMBA.CRE~ ~override~	// Ogre Mage
+	REMOVE_CRE_ITEM ~SW1H22~	// SW1H22 = scimitar +1
+BUT_ONLY
+
+COPY_EXISTING ~OGRMBA.CRE~ ~override~	// Ogre Mage
+	REMOVE_CRE_ITEM ~SW1H22~	// SW1H22 = scimitar +1
+BUT_ONLY
+
+
+	// Rashad's Talon
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR0500.ARE~ ~override~	// Durlag's Tower exterior
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~SW1H23~ END	// SW1H23 = Rashad's Talon
+BUT_ONLY END ELSE BEGIN
+COPY_EXISTING ~BG0500.ARE~ ~override~	// Durlag's Tower exterior
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~SW1H23~ END	// SW1H23 = Rashad's Talon
+BUT_ONLY END
+
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR2100.ARE~ ~override~	// Cloakwood second main area
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~SW1H23~ END	// SW1H23 = Rashad's Talon
+BUT_ONLY END ELSE BEGIN
+COPY_EXISTING ~BG2100.ARE~ ~override~	// Cloakwood second main area
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~SW1H23~ END	// SW1H23 = Rashad's Talon
+BUT_ONLY END 
+
+
+	// Harrower
+
+COPY_EXISTING ~ELKART.CRE~ ~override~
+	REMOVE_CRE_ITEM ~SW1H79~
+	ADD_CRE_ITEM ~SW1H04~ #0 #0 #0 ~none~ ~weapon1~
+BUT_ONLY
+
+COPY_EXISTING ~ZEELA.CRE~ ~override~
+	REMOVE_CRE_ITEM ~SW1H79~
+BUT_ONLY
+
+
+	// Katana +1
+
+COPY_EXISTING ~OGREMA03.CRE~ ~override~
+	REMOVE_CRE_ITEM ~SW1H44~
+	ADD_CRE_ITEM ~SW1H01~ #0 #0 #0 ~none~ ~weapon1~
+BUT_ONLY
+
+
+	// Quarterstaff +2
+
+COPY_EXISTING ~LASKAL.CRE~ ~override~
+	REMOVE_CRE_ITEM ~STAF18~
+	ADD_CRE_ITEM ~STAF01~ #0 #0 #0 ~none~ ~weapon1~
+BUT_ONLY
+
+
+	// Chesley Crusher
+
+COPY_EXISTING ~INGOT.CRE~ ~override~
+	REMOVE_CRE_ITEM ~HALB13~
+	ADD_CRE_ITEM ~HALB01~ #0 #0 #0 ~none~ ~weapon1~
+BUT_ONLY
+
+
+	// Club +1
+
+COPY_EXISTING ~KRUMM.CRE~ ~override~
+	REMOVE_CRE_ITEM ~BLUN36~
+	ADD_CRE_ITEM ~BLUN01~ #0 #0 #0 ~none~ ~weapon1~
+BUT_ONLY
+	
+
+	// Night Club
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR0100.ARE~ ~override~	// NW BG
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~BLUN38~ END	// SW1H49 = ninja-to +1
+BUT_ONLY END ELSE BEGIN
+COPY_EXISTING ~BG0100.ARE~ ~override~	// NW BG
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~BLUN38~ END	// SW1H49 = ninja-to +1
+BUT_ONLY END
+
+
+	// The Mighty Oak
+
+COPY_EXISTING ~AMARAN.CRE~ ~override~
+	REMOVE_CRE_ITEM ~BLUN37~
+	ADD_CRE_ITEM ~BLUN10~ #0 #0 #0 ~none~ ~weapon1~
+BUT_ONLY
+
+
+	// Sling of Unerring Accuracy
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR0104.ARE~ ~override~	// Splurging Sturgeon
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~SLNG11~ END	// SNLG11 = sling of unerring accuracy
+BUT_ONLY END ELSE BEGIN
+COPY_EXISTING ~BG0104.ARE~ ~override~	// NW BG
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~BLUN38~ END	// SW1H49 = ninja-to +1
+BUT_ONLY END
+
+COPY_EXISTING ~STOBLACK.STO~ ~override~	// Black Lily
+	REMOVE_STORE_ITEM ~SLNG11~
+BUT_ONLY
+
+
+	// The Thresher
+
+COPY_EXISTING ~STO0703.STO~ ~override~	// Sorcerous Sundries
+	REMOVE_STORE_ITEM ~BLUN39~
+BUT_ONLY
+
+
+	// The Stupefier
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR3308.ARE~ ~override~	// Burning Wizard second floor
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~BLUN41~ END	// BLUN41 = the stupefier
+BUT_ONLY END ELSE BEGIN
+COPY_EXISTING ~BG3308.ARE~ ~override~	// Burning Wizard second floor
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~BLUN41~ END	// BLUN41 = the stupefier
+BUT_ONLY END
+
+
+	// The Gold Digger
+
+COPY_EXISTING ~STOCHEAP.STO~ ~override~	// Lucky Aello
+	REMOVE_STORE_ITEM ~SW2H22~
+BUT_ONLY
+
+
+	// Golden Axe
+
+COPY_EXISTING ~FENTEN.CRE~ ~override~
+	REMOVE_CRE_ITEM ~AX1H19~
+	ADD_CRE_ITEM ~AX1H01~ #0 #0 #0 ~none~ ~weapon1~
+BUT_ONLY
+
+
+	// Elemental bullets and darts
+
+COPY_EXISTING ~HIGHHEDG.STO~ ~override~	// High Hedge
+	PATCH_FOR_EACH item_to_delete IN ~BULL07~ ~BULL08~ ~BULL09~ ~DART09~ ~DART10~ ~DART11~ BEGIN
+	LPF DELETE_STORE_ITEM STR_VAR item_to_delete END
+	END
+BUT_ONLY
+
+
+	// Karajah's Life and Death
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR0514.ARE~ ~override~	// Durlag's Tower, 5th level
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~LEAT09~ END	// LEAT09 = Karajah's Life and Death
+BUT_ONLY END ELSE BEGIN
+COPY_EXISTING ~BG0514.ARE~ ~override~	// Durlag's Tower, 5th level
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~LEAT09~ END	// LEAT09 = Karajah's Life and Death
+BUT_ONLY END
+
+
+	// Magma Bulwark
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR0123.ARE~ ~override~	// Undercity, temple of Bhaal
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~PLAT24~ END	// PLAT24 = Magma Bulwark
+BUT_ONLY END ELSE BEGIN
+COPY_EXISTING ~BG0123.ARE~ ~override~	// Undercity, temple of Bhaal
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~PLAT24~ END	// PLAT24 = Magma Bulwark
+BUT_ONLY END
+
+COPY_EXISTING ~DELTAN.CRE~ ~override~
+	REMOVE_CRE_ITEM ~PLAT24~
+	ADD_CRE_ITEM ~PLAT04~ #0 #0 #0 ~none~ ~armor~
+BUT_ONLY
+
+ACTION_IF FILE_EXISTS_IN_GAME ~bdeltan.CRE~ BEGIN
+COPY_EXISTING ~bdeltan.CRE~ ~override~
+	REMOVE_CRE_ITEM ~PLAT24~
+	ADD_CRE_ITEM ~PLAT04~ #0 #0 #0 ~none~ ~armor~
+BUT_ONLY
+END
+
+
+	// Belt of the Antipode
+
+COPY_EXISTING ~GORION.CRE~ ~override~
+	REMOVE_CRE_ITEM ~BELT16~
+BUT_ONLY
+
+
+	// Buckley's Buckler
+
+COPY_EXISTING ~FRIEND.STO~ ~override~	// Friendly Arm
+	REMOVE_STORE_ITEM ~SHLD33~
+BUT_ONLY
+
+
+	// Other changes to Friendly Arm store
+
+COPY_EXISTING ~FRIEND.STO~ ~override~	// Friendly Arm
+	REMOVE_STORE_ITEM ~XBOW02~
+	ADD_STORE_ITEM ~SHLD06~ #0 #0 #0 ~IDENTIFIED~ #5
+BUT_ONLY
+
+
+	// Thunderhummer Smithy
+
+COPY_EXISTING ~TAERUM.STO~ ~override~	// Thunderhammer Smithy
+	REMOVE_STORE_ITEM ~AX1H18~	// Beruel's Retort
+	REMOVE_STORE_ITEM ~SHLD06~	// Large Shield +1
+	REMOVE_STORE_ITEM ~BRAC05~	// Bracers
+	REMOVE_STORE_ITEM ~BELT01~	// Belt
+BUT_ONLY
+
+
+	// Feldepost Inn
+
+COPY_EXISTING ~INN3351.STO~ ~override~	// Feldepost Inn
+	REMOVE_STORE_ITEM ~SCRL5U~	// Reflected Image
+	REMOVE_STORE_ITEM ~SCRLA2~	// Deafness
+	REMOVE_STORE_ITEM ~SCRLA3~	// Glitterdust
+BUT_ONLY
+
+
+	// Iron Thorn
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR1906.ARE~ ~override~	// Bandit Camp tent
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~RING47~ END	// RING47 = Iron Thorn
+BUT_ONLY END ELSE BEGIN
+COPY_EXISTING ~BG1906.ARE~ ~override~	// Bandit Camp tent
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~RING47~ END	// RING47 = Iron Thorn
+BUT_ONLY END
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR2100.ARE~ ~override~	// Cloakwood second main area
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~RING47~ END	// RING47 = Iron Thorn
+BUT_ONLY END ELSE BEGIN
+COPY_EXISTING ~BG2100.ARE~ ~override~	// Cloakwood second main area
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~RING47~ END	// RING47 = Iron Thorn
+BUT_ONLY END
+
+
+	// The Ossifier
+
+COPY_EXISTING ~STOCHEAP.STO~ ~override~	// Lucky Aello
+	REMOVE_STORE_ITEM ~STAF25~
+BUT_ONLY
+
+
+	// Backbiter
+
+COPY_EXISTING ~OSMADI.CRE~ ~override~
+	REMOVE_CRE_ITEM ~SPER03~
+	ADD_CRE_ITEM ~STAF01~ #0 #0 #0 ~none~ ~weapon1~
+BUT_ONLY
+
+
+	// Gauntlets of Weapon Expertise (extra copy)
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~AR1901.ARE~ ~override~	// Tazok's tent
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~BRAC10~ END	
+BUT_ONLY END ELSE BEGIN
+COPY_EXISTING ~BG1901.ARE~ ~override~	// Tazok's tent
+	LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~BRAC10~ END
+BUT_ONLY END
+
+
+	// Girdle of Bluntness (extra copy)
+
+COPY_EXISTING ~STO1117.STO~ ~override~	// General Store
+	REMOVE_STORE_ITEM ~BELT03~
+BUT_ONLY
+
+
+	// Cloak of Non-detection (extra copy)
+
+COPY_EXISTING ~ORDULI.CRE~ ~override~
+	REMOVE_CRE_ITEM ~CLCK06~
+BUT_ONLY
+
+
+	// Undo changes to Alora's Rabbit's Foot
+
+ACTION_IF GAME_IS ~bgee bg2ee eet~ THEN BEGIN
+	COPY_EXISTING ~MISC88.ITM~ ~override~
+LPF DELETE_EFFECT INT_VAR check_globals = 0 match_opcode = 0 END
+LPF DELETE_EFFECT INT_VAR check_globals = 1 match_opcode = 33 END
+LPF DELETE_EFFECT INT_VAR check_globals = 2 match_opcode = 34 END
+LPF DELETE_EFFECT INT_VAR check_globals = 3 match_opcode = 35 END
+LPF DELETE_EFFECT INT_VAR check_globals = 4 match_opcode = 36 END
+LPF DELETE_EFFECT INT_VAR check_globals = 5 match_opcode = 37 END
+LPF DELETE_EFFECT INT_VAR check_globals = 6 match_opcode = 59 END
+LPF DELETE_EFFECT INT_VAR check_globals = 7 match_opcode = 91 END
+LPF DELETE_EFFECT INT_VAR check_globals = 8 match_opcode = 92 END
+LPF DELETE_EFFECT INT_VAR check_globals = 9 match_opcode = 275 END
+LPF DELETE_EFFECT INT_VAR check_globals = 10 match_opcode = 276 END
+LPF DELETE_EFFECT INT_VAR check_globals = 11 match_opcode = 277 END
+BUT_ONLY
+END
+
+
+	// Claw of Kazgaroth save vs. Death penalty
+
+COPY_EXISTING ~MISC72.ITM~ ~override~
+	LPF	DELETE_EFFECT INT_VAR match_opcode = 33	match_timing = 2 END
+	LPF	ADD_ITEM_EQEFFECT INT_VAR opcode = 33 target = 1 timing = 2 parameter1 = ~-3~ END
+	SAY IDENTIFIED_DESC @4
+BUT_ONLY
+
+
+	// Allow Ring of Wizardry to stack with itself
+
+ACTION_IF GAME_IS ~bgee bg2ee eet~ BEGIN
+	COPY_EXISTING ~RING08.ITM~ ~override~
+LPF DELETE_EFFECT INT_VAR check_globals = 0 match_opcode = 180 END
+LPF DELETE_EFFECT INT_VAR check_globals = 1 match_opcode = 180 END
+BUT_ONLY
+END
+
+
+	// Restore infinite charges to Cloak of Alegernon
+
+ACTION_IF GAME_IS ~bgee bg2ee eet~ THEN BEGIN
+	COPY_EXISTING ~clck08.itm~ ~override~
+		SET ITM_HEAD_charges = 0
+	BUT_ONLY
+END
+
+
+	// Restore classic Poison Weapon behavior
+
+STRING_SET
+24301 @2 // Assassin
+28606 @3 // Blackguard
+USING "NostalgiaPack/tra/en_US/descriptions.tra"
+
+ACTION_IF GAME_IS ~bgee bg2ee eet~ THEN BEGIN
+	COPY_EXISTING ~SPCL423.SPL~ ~override~
+LPF DELETE_EFFECT INT_VAR check_globals = 0 match_opcode = 321 END
+LPF DELETE_EFFECT INT_VAR check_globals = 1 match_opcode = 248 END
+LPF DELETE_EFFECT INT_VAR check_globals = 2 match_opcode = 249 END
+LPF DELETE_EFFECT INT_VAR check_globals = 3 match_opcode = 141 END
+LPF DELETE_EFFECT INT_VAR check_globals = 4 match_opcode = 328 END
+LPF DELETE_EFFECT INT_VAR check_globals = 5 match_opcode = 282 END
+LPF DELETE_EFFECT INT_VAR check_globals = 6 match_opcode = 142 END
+LPF DELETE_EFFECT INT_VAR check_globals = 7 match_opcode = 174 END
+LPF DELETE_EFFECT INT_VAR check_globals = 8 match_opcode = 174 END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 248 target = 1 power = 0 timing = 0 resist_dispel = 2 duration = 30 probability1 = 100 STR_VAR resource = ~SPCL422~ END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 248 target = 1 power = 0 timing = 0 resist_dispel = 2 duration = 30 probability1 = 100 STR_VAR resource = ~SPCL422A~ END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 249 target = 1 power = 0 timing = 0 resist_dispel = 2 duration = 30 probability1 = 100 STR_VAR resource = ~SPCL422A~ END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 249 target = 1 power = 0 timing = 0 resist_dispel = 2 duration = 30 probability1 = 100 STR_VAR resource = ~SPCL422~ END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 141 target = 1 power = 0 parameter1 = 0 parameter2 = 0 timing = 1  resist_dispel = 2 duration = 0 probability1 = 100 END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 282 target = 1 power = 0 parameter1 = 4 parameter2 = 3 timing = 0  resist_dispel = 2 duration = 30 probability1 = 100 END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 142 target = 1 power = 0 parameter2 = 95 timing = 0  resist_dispel = 2 duration = 30 probability1 = 100 END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 174 target = 1 power = 0 timing = 1  resist_dispel = 2 duration = 10 probability1 = 100 STR_VAR resource = ~EFF_P87~ END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 174 target = 1 power = 0 timing = 3  resist_dispel = 2 duration = 10 probability1 = 100 STR_VAR resource = ~EFF_E07~ END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 248 target = 1 power = 0 timing = 0  resist_dispel = 2 duration = 30 probability1 = 100 STR_VAR resource = ~SPCL422B~ END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 249 target = 1 power = 0 timing = 0  resist_dispel = 2 duration = 30 probability1 = 100 STR_VAR resource = ~SPCL422B~ END
+LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 power = 0 parameter1 = RESOLVE_STR_REF (~You cannot cast this spell until the current casting has run out.~) timing = 0  resist_dispel = 2 duration = 30 probability1 = 100 STR_VAR resource = ~SPCL423~ END
+SAY UNIDENTIFIED_DESC @1 
+BUT_ONLY
+END
+

@@ -1,0 +1,165 @@
+// ~Restore BG1 Flaming Fist appearance~
+// DESIGNATED 60 LABEL "ac-bg-flamingfist"
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY animation BEGIN
+
+0x6100 => 0x6000	// human male fighter to cleric
+0x6101 => 0x6001	// elf male fighter to cleric
+0x6102 => 0x6002	// dwarf male fighter to cleric
+0x6103 => 0x6003	// halfling male fighter to cleric
+0x6104 => 0x6004	// gnome male fighter to cleric
+0x6105 => 0x6005	// half-orc male fighter to cleric
+0x6110 => 0x6010	// human female fighter to cleric
+0x6111 => 0x6011	// elf female fighter to cleric
+0x6112 => 0x6012	// dwarf female fighter to cleric
+0x6113 => 0x6013	// halfling female fighter to cleric
+0x6114 => 0x6014	// gnome female fighter to cleric
+0x6115 => 0x6015	// half-orc female fighter to cleric
+0x6200 => 0x6000	// human male mage to cleric
+0x6201 => 0x6001	// elf male mage to cleric
+0x6202 => 0x6002	// dwarf male mage to cleric
+0x6204 => 0x6004	// gnome male mage to cleric
+0x6205 => 0x6005	// half-orc male mage to cleric
+0x6210 => 0x6010	// human female mage to cleric
+0x6211 => 0x6011	// elf female mage to cleric
+0x6212 => 0x6012	// dwarf female mage to cleric
+0x6214 => 0x6014	// gnome female mage to cleric
+0x6215 => 0x6015	// half-orc female mage to cleric
+0x6300 => 0x6000	// human male thief to cleric
+0x6301 => 0x6001	// elf male thief to cleric
+0x6302 => 0x6002	// dwarf male thief to cleric
+0x6303 => 0x6003	// halfling male thief to cleric
+0x6304 => 0x6004	// gnome male thief to cleric
+0x6305 => 0x6005	// half-orc male thief to cleric
+0x6310 => 0x6010	// human female thief to cleric
+0x6311 => 0x6011	// elf female thief to cleric
+0x6312 => 0x6012	// dwarf female thief to cleric
+0x6313 => 0x6013	// halfling female thief to cleric
+0x6314 => 0x6014	// gnome female thief to cleric
+0x6315 => 0x6015	// half-orc female thief to cleric
+0x5600 => 0x5622	// human male fighter to cleric BG1
+0x5601 => 0x5623	// elf male fighter to cleric
+0x5602 => 0x5624	// dwarf male fighter to cleric
+0x5603 => 0x5625	// halfling male fighter to cleric
+0x5630 => 0x5642	// gnome male fighter to cleric
+0x5631 => 0x5643	// half-orc male fighter to cleric
+0x5604 => 0x5626	// human female fighter to cleric
+0x5605 => 0x5627	// elf female fighter to cleric
+0x5606 => 0x5628	// dwarf female fighter to cleric
+0x5607 => 0x5629	// halfling female fighter to cleric
+0x5632 => 0x5644	// gnome female fighter to cleric
+0x5633 => 0x5645	// half-orc female fighter to cleric
+0x5608 => 0x5622	// human male mage to cleric
+0x5609 => 0x5623	// elf male mage to cleric
+0x5610 => 0x5624	// dwarf male mage to cleric
+0x5634 => 0x5642	// gnome male mage to cleric
+0x5635 => 0x5645	// half-orc male mage to cleric
+0x5611 => 0x5626	// human female mage to cleric
+0x5612 => 0x5627	// elf female mage to cleric
+0x5613 => 0x5628	// dwarf female mage to cleric
+0x5636 => 0x5644	// gnome female mage to cleric
+0x5637 => 0x5645	// half-orc female mage to cleric
+0x5614 => 0x5622	// human male thief to cleric
+0x5615 => 0x5623	// elf male thief to cleric
+0x5616 => 0x5624	// dwarf male thief to cleric
+0x5617 => 0x5625	// halfling male thief to cleric
+0x5638 => 0x5642	// gnome male thief to cleric
+0x5639 => 0x5643	// half-orc male thief to cleric
+0x5618 => 0x5626	// human female thief to cleric
+0x5619 => 0x5627	// elf female thief to cleric
+0x5620 => 0x5628	// dwarf female thief to cleric
+0x5621 => 0x5629	// hafling female thief to cleric
+0x5640 => 0x5644	// gnome female thief to cleric
+0x5641 => 0x5645	// half-orc female thief to cleric
+
+END
+
+	// Original Flaming Fist CREs
+
+ACTION_FOR_EACH creature IN ~chimp5~ ~ffunit~ ~ffsleep~ ~flam~ ~flam2~ ~flam3~ ~flam4~ ~flam5~ ~flam6~ ~flam7~ ~flam8~ ~flam9~ ~flam10~ ~flam11~ ~flam12~ ~flambird~ ~flamc7~ ~flame~ ~flamen~ ~flamgg~ ~flamhusb~ ~flampun~ ~flampun2~ ~flamsco~ ~flamvai~ ~flamwiz~ ~watchm~ ~vai~ ~laola~ ~fergus~ ~flam13~ ~caedmon~ ~sorrel~ ~bill~ BEGIN
+	ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+		COPY_EXISTING ~%creature%.cre~ ~override~		
+			READ_LONG 0x28 anim
+			WRITE_BYTE 0x2c 35 	// metal color
+			WRITE_BYTE 0x2d 46 	// minor color
+			WRITE_BYTE 0x2e 63 	// major color
+			WRITE_BYTE 0x30 63 	// leather color
+			WRITE_BYTE 0x31 30 	// armor color
+			PATCH_IF (VARIABLE_IS_SET $animation(~%anim%~)) BEGIN
+				WRITE_LONG 0x28 $animation(~%anim%~)
+			END
+		BUT_ONLY
+	END
+END
+
+	// Siege of Dragonspear CREs
+
+	ACTION_FOR_EACH creature IN ~bdbalquo~ ~bdcoa04d~ ~bdcoa05d~ ~bdff1000~ ~bdff1001~ ~bdff1002~ ~bdff1271~ ~bdff1697~ ~bdff1709~ ~bdffdead~ ~bdffdopp~ ~bdffgirl~ ~bdffmerc~ ~bdffsit1~ ~bdffsit2~ ~bdffsol1~ ~bdffsol2~ ~bdffxxii~ ~bdfist01~ ~bdfist05~ ~bdfist1a~ ~bdfist1b~ ~bdfist1c~ ~bdfist20~ ~bdfist21~ ~bdfist22~ ~bdfist23~ ~bdfist24~ ~bdfist25~ ~bdfist26~ ~bdfist27~ ~bdfist30~ ~bdfist31~ ~bdfist32~ ~bdfist35~ ~bdfist36~ ~bdfist37~ ~bdfist38~ ~bdfist40~ ~bdfist42~ ~bdfist60~ ~bdfist61~ ~bdfist62~ ~bdfist63~ ~bdfist64~ ~bdfist80~ ~bdfist81~ ~bdfist82~ ~bdfist83~ ~bdfist84~ ~bdfist85~ ~bdfist86~ ~bdfist91~ ~bdfist92~ ~bdfist93~ ~bdfist94~ ~bdfist95~ ~bdfist96~ ~bdfist97~ ~bdfist98~ ~bdfist98~ ~bdfist99~ ~bdfistcc~ ~bdfistcd~ ~bdfistce~ ~bdfistcf~ ~bdfistcl~ ~bdfistcx~ ~bdfistex~ ~bdfistx1~ ~bdfistx2~ ~bdfistx3~ ~bdfistxx~ ~bdfisx35~ ~bdfscou2~ ~bdfscout~ ~bdlaraam~ ~bdtemp1~ ~bdtemp2~ ~bdzerxas~ ~bdjenks~ ~bdriggs~ ~bdffvida~ BEGIN
+		ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+			COPY_EXISTING ~%creature%.cre~ ~override~		
+				READ_LONG 0x28 anim
+				WRITE_BYTE 0x2c 35 	// metal color
+				WRITE_BYTE 0x2d 46 	// minor color
+				WRITE_BYTE 0x2e 63 	// major color
+				WRITE_BYTE 0x30 63 	// leather color
+				WRITE_BYTE 0x31 30 	// armor color
+				PATCH_IF (VARIABLE_IS_SET $animation(~%anim%~)) BEGIN
+					WRITE_LONG 0x28 $animation(~%anim%~)
+				END
+			BUT_ONLY
+		END
+	END
+	
+	ACTION_FOR_EACH creature IN ~bdffmage~ ~bdfistm1~ ~bdffwiz~ ~bdfist41~ ~bdfistm2~ ~bdfistm3~ BEGIN
+		ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+			COPY_EXISTING ~%creature%.cre~ ~override~
+			PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+				WRITE_BYTE 0x2c 35 	// metal color
+				WRITE_BYTE 0x2d 46 	// minor color
+				WRITE_BYTE 0x2e 63 	// major color
+				WRITE_BYTE 0x30 63 	// leather color
+				WRITE_BYTE 0x31 30 	// armor color
+			END
+		END
+	END
+	
+	ACTION_IF (FILE_EXISTS_IN_GAME ~bdnederl.cre~) THEN BEGIN
+	COPY_EXISTING ~bdnederl.cre~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	 WRITE_BYTE 0x2c 25 	// metal color
+	 WRITE_BYTE 0x2d 47 	// minor color
+	 WRITE_BYTE 0x2e 79 	// major color
+	 WRITE_BYTE 0x30 79 	// leather color
+	 WRITE_BYTE 0x31 21 	// armor color
+	END
+	BUT_ONLY
+	END
+	
+
+	ACTION_IF (FILE_EXISTS_IN_GAME ~uniflam.itm~) THEN BEGIN
+	COPY_EXISTING ~uniflam.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	 LAUNCH_PATCH_MACRO ~clear~
+	 LAUNCH_PATCH_MACRO ~ffcolor~
+	END
+	BUT_ONLY
+	END
+	
+	ACTION_IF (FILE_EXISTS_IN_GAME ~bdff1000.itm~) THEN BEGIN
+	COPY_EXISTING ~bdff1000.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	 LAUNCH_PATCH_MACRO ~clear~
+	 LAUNCH_PATCH_MACRO ~ffcolor~
+	END
+	BUT_ONLY
+	END
+	
+	ACTION_IF (FILE_EXISTS_IN_GAME ~bdff1002.itm~) THEN BEGIN
+	COPY_EXISTING ~bdff1002.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN 
+	 LAUNCH_PATCH_MACRO ~clear~
+	 LAUNCH_PATCH_MACRO ~ffcolor~
+	END
+	BUT_ONLY
+	END
+	
