@@ -69,5 +69,5 @@ This mod would not exist without the generous, friendly help of people like Scot
 Finally, thanks to Beamdog for reviving interest in these games, birthing a new generation of modders while drawing veterans back, and still patching the Enhanced Editions almost ten years after their initial release.
 
 ## Version History
-### RC4 (27 July 2021)
+**RC4 (27 July 2021)**
 - Initial GitHub release
