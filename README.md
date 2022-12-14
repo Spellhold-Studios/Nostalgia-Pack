@@ -3,7 +3,9 @@
 
 **Author: [Andrea C.](http://www.shsforums.net/user/7164-andrea-c/)**
 
-**[Download](https://github.com/SpellholdStudios/Nostalgia-Pack/releases) | [Website](http://www.shsforums.net/) | [Forum](http://www.shsforums.net/topic/61095-nostalgia-pack-putting-the-bg-back-in-bgee/)**
+**[Download](https://github.com/SpellholdStudios/Nostalgia-Pack/releases)**
+
+**[Forum](http://www.shsforums.net/topic/61630-nostalgia-pack/)**
 
 ## Overview
 This mod has had a very, very long gestation. It started way back in 2012-2013, when BG:EE was released and lacked the nostalgic punch I was expecting it to pack. No stony AD&D FR-inspired UI, no BG1 sprites & paperdolls, no BG casting sounds and voices... the list goes on. So I started looking into ways to bring all that stuff back into the Enhanced Editions and yes, it took this long to accomplish half of what was originally planned. I hope you'll enjoy this nonetheless!
