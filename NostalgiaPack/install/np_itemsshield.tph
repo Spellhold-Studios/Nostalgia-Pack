@@ -774,8 +774,8 @@ PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
   
   // START SOD SHIELDS
   
-  ACTION_IF (MOD_IS_INSTALLED ~setup-animod.tp2~ 20) OR
-			(MOD_IS_INSTALLED ~setup-animod.tp2~ 21) THEN BEGIN
+  ACTION_IF (MOD_IS_INSTALLED ~setup-nostalgiapack.tp2~ 20) OR
+			(MOD_IS_INSTALLED ~setup-nostalgiapack.tp2~ 21) THEN BEGIN
   
   ACTION_IF (FILE_EXISTS_IN_GAME ~bdshld03.itm~) THEN BEGIN
 COPY_EXISTING ~bdshld03.itm~ ~override~
@@ -820,8 +820,8 @@ PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
 
 	ACTION_IF (GAME_IS ~bg2ee eet~) THEN BEGIN
 	
-	ACTION_IF (MOD_IS_INSTALLED ~setup-animod.tp2~ 20) OR
-			  (MOD_IS_INSTALLED ~setup-animod.tp2~ 21) THEN BEGIN
+	ACTION_IF (MOD_IS_INSTALLED ~setup-nostalgiapack.tp2~ 20) OR
+			  (MOD_IS_INSTALLED ~setup-nostalgiapack.tp2~ 21) THEN BEGIN
 
   ACTION_IF (FILE_EXISTS_IN_GAME ~shld01A.itm~) THEN BEGIN
 COPY_EXISTING ~shld01A.itm~ ~override/shld01.itm~

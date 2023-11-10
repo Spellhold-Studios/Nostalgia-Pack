@@ -620,8 +620,8 @@ PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
   BUT_ONLY_IF_IT_CHANGES
   END
   
-  ACTION_IF (MOD_IS_INSTALLED ~setup-animod.tp2~ 20) OR 
-			(MOD_IS_INSTALLED ~setup-animod.tp2~ 21) THEN BEGIN
+  ACTION_IF (MOD_IS_INSTALLED ~setup-nostalgiapack.tp2~ 20) OR 
+			(MOD_IS_INSTALLED ~setup-nostalgiapack.tp2~ 21) THEN BEGIN
   
   ACTION_IF (FILE_EXISTS_IN_GAME ~bdhelm02.itm~) THEN BEGIN
 COPY_EXISTING ~bdhelm02.itm~ ~override~

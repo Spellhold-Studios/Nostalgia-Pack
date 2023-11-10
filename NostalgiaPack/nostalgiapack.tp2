@@ -6,15 +6,7 @@
 
 BACKUP ~weidu_external/backup/nostalgiapack~
 AUTHOR ~ac86public@gmail.com~
-VERSION ~RC4~
-
-MODDER setup_tra        ~FAIL~
-       area_variables   ~FAIL~
-       missing_extern   ~FAIL~
-       missing_resref   ~FAIL~
-       ict2_actions     ~FAIL~
-       missing_eval     ~FAIL~
-       overwriting_file ~NONE~
+VERSION ~1.0~
 
 LANGUAGE ~English~ ~en_US~ ~NostalgiaPack/tra/en_US/setup.tra~
 

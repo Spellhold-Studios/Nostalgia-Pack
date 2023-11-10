@@ -72,7 +72,7 @@ BEST ENJOYED WITH:
 
 Sam.'s BGEE Classic Movies
 Argent77's Convenient EE NPCs
-skellytz's Infinity Sounds (currently in beta)
+skellytz's Infinity Sounds
 
 
 
