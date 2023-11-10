@@ -5,7 +5,7 @@
 
 **[Download](https://github.com/SpellholdStudios/Nostalgia-Pack/releases)**
 
-**[Forum](http://www.shsforums.net/topic/61630-nostalgia-pack/)**
+**[Forum](https://forums.beamdog.com/discussion/82532/bg-ee-bgii-ee-nostalgia-pack-putting-the-bg-back-in-bg-ee)**
 
 ## Overview
 This mod has had a very, very long gestation. It started way back in 2012-2013, when BG:EE was released and lacked the nostalgic punch I was expecting it to pack. No stony AD&D FR-inspired UI, no BG1 sprites & paperdolls, no BG casting sounds and voices... the list goes on. So I started looking into ways to bring all that stuff back into the Enhanced Editions and yes, it took this long to accomplish half of what was originally planned. I hope you'll enjoy this nonetheless!
@@ -56,12 +56,12 @@ Because UI modding is uncharted territory for me. A port of the stony UI for thi
 
 > Why no sound component?
 
-Because skellytz's Infinity Sounds (currently in beta) already handles that.
+Because skellytz's Infinity Sounds already handles that.
 
 ## Best Enjoyed With
 - Sam.'s [BGEE Classic Movies](https://github.com/Sampsca/BGEE-Classic-Movies)
 - Argent77's [Convenient EE NPCs](https://github.com/Argent77/A7-NoEENPCs)
-- skellytz's [Infinity Sounds](https://github.com/SpellholdStudios/Infinity-Sounds)
+- skellytz's [Infinity Sounds](https://github.com/skellytz/infinity-sounds)
 
 ## Acknowledgements
 I'm new to modding and, let's face it, not very good at it.
@@ -71,5 +71,10 @@ This mod would not exist without the generous, friendly help of people like Scot
 Finally, thanks to Beamdog for reviving interest in these games, birthing a new generation of modders while drawing veterans back, and still patching the Enhanced Editions almost ten years after their initial release.
 
 ## Version History
+**v1.0 (8 November 2023)**
+- Fixed a bug that prevented certain items from being patched
+- Fixed incorrectly displayed spell scroll icons in the inventory
+- Added code to prevent winged sprites from being patched, as BG1 sprites don't support wings
+
 **RC4 (27 July 2021)**
 - Initial GitHub release
