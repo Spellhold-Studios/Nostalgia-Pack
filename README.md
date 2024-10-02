@@ -9,7 +9,7 @@
 [![Downloads](https://img.shields.io/github/downloads/Spellhold-Studios/Nostalgia-Pack/total?color=%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
 [![Views](https://badges.pufler.dev/visits/Spellhold-Studios/Nostalgia-Pack?label=views&color=%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
 <br>
-[![Games](https://img.shields.io/badge/games-BG%3AEE%20%a0%20BG2%3AEE%20%a0%20EET%20%a0%20IWD%3AEE-%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
+[![Games](https://img.shields.io/badge/games-BG%3AEE%20%a0%20SoD%20%a0%20BG2%3AEE%20%a0%20EET%20%a0%20IWD%3AEE-%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
 [![Language](https://img.shields.io/badge/language-en-%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
 
 <!--
