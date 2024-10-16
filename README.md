@@ -57,8 +57,7 @@ This mod has had a very, very long gestation. It started way back in 2012-2013, 
 
 - Andrea C.
 
-**Acknowledgements**  
+**Special Acknowledgements**  
 
 - This mod would not exist without the generous, friendly help of people like Scott Brooks, Erephine, CamDawg, Miloch, Cuv, Troodon80, skellytz (who single-handedly coded the Dimension Door component), kjeron, Argent77, Liam Esler.
-
 - Finally, thanks to Beamdog for reviving interest in these games, birthing a new generation of modders while drawing veterans back, and still patching the Enhanced Editions almost ten years after their initial release. 
