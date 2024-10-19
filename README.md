@@ -1,14 +1,8 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Spellhold-Studios/Spellhold-Studios.github.io/main/assets/images/shs-corner-logo.png" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Spellhold-Studios/Spellhold-Studios.github.io/main/assets/images/shs-corner-logo.png" />
-  <img align="right" alt="SHS logo" src="https://raw.githubusercontent.com/Spellhold-Studios/Spellhold-Studios.github.io/main/assets/images/shs-corner-logo.png" width="22%">
-</picture>
-
 [![Release](https://img.shields.io/github/v/release/Spellhold-Studios/Nostalgia-Pack?include_prereleases&color=%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases/latest)
 [![Published](https://img.shields.io/github/release-date/Spellhold-Studios/Nostalgia-Pack?display_date=published_at&label=published&color=%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/Spellhold-Studios/Nostalgia-Pack/total?color=%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
 [![Views](https://badges.pufler.dev/visits/Spellhold-Studios/Nostalgia-Pack?label=views&color=%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
-<br>
+[![Platform](https://img.shields.io/badge/platform-Windows%20%a0%20macOS%20%a0%20Linux%20%a0%20Project%20Infinity-%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
 [![Games](https://img.shields.io/badge/games-BG%3AEE%20%a0%20SoD%20%a0%20BG2%3AEE%20%a0%20EET%20%a0%20IWD%3AEE-%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
 [![Language](https://img.shields.io/badge/language-en-%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
 
@@ -20,6 +14,14 @@ Games full list: BG1 BG2 BGT BG%3AEE SoD BG2%3AEE EET IWD1 IWD2 IWD%3AEE PST PST
 IETF language tags: https://spellhold-studios.github.io/readmes/template-basic/ietf-lang-tags.pdf
 Why some badges update slowly: https://github.com/pujux/badge-it/issues/78
 -->
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Spellhold-Studios/Spellhold-Studios.github.io/main/assets/images/shs-corner-logo.png" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Spellhold-Studios/Spellhold-Studios.github.io/main/assets/images/shs-corner-logo.png" />
+  <img alt="SHS logo" src="https://raw.githubusercontent.com/Spellhold-Studios/Spellhold-Studios.github.io/main/assets/images/shs-corner-logo.png" width="220" height="115">
+</picture>
 
 # Nostalgia Pack
 
