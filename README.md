@@ -1,5 +1,5 @@
 [![Release](https://img.shields.io/github/v/release/Spellhold-Studios/Nostalgia-Pack?include_prereleases&color=%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases/latest)
-[![Published](https://img.shields.io/github/release-date/Spellhold-Studios/Nostalgia-Pack?display_date=published_at&label=published&color=%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases/latest)
+[![Published](https://img.shields.io/github/release-date-pre/Spellhold-Studios/Nostalgia-Pack?display_date=published_at&label=published&color=%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/Spellhold-Studios/Nostalgia-Pack/total?color=%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%a0%20macOS%20%a0%20Linux%20%a0%20Project%20Infinity-%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
 [![Games](https://img.shields.io/badge/games-BG%3AEE%20%a0%20SoD%20%a0%20BG2%3AEE%20%a0%20EET%20%a0%20IWD%3AEE-%2392403a)](https://github.com/Spellhold-Studios/Nostalgia-Pack/releases)
